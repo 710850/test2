@@ -1,0 +1,258 @@
+/*
+mobile first
+*/
+
+  .main-header {
+
+
+
+    background: @menu-bg-color;
+
+
+    &__logo > a{
+      display: block;
+      width: 145px;
+      height: 60px;
+
+      background: url("../img/logo-min.png") no-repeat center;
+
+      &:hover{
+        background: url("../img/pink-logo-min.png") no-repeat center;
+      }
+    }
+
+    &__container{
+      width: 100%;
+      min-width: 320px;
+      padding: 0;
+    }
+
+    &__icon-menu {
+      position: absolute;
+      right: 18px;
+      top: 16px;
+      border: none;
+      background: transparent;
+      fill: @menu-font-color;
+
+      &--close{
+        display: none;
+      }
+
+      &:hover{
+        fill: @icon-regular-color;
+      }
+
+      &:active{
+        opacity: .6;
+      }
+    }
+
+    &__navigation-list {
+      padding: 0;
+      display: none;
+
+      li {
+
+        a {
+          color: @menu-font-color;
+          font-family: @font-size-bold;
+          line-height: 55px;
+        }
+      }
+    }
+
+    &__list-item {
+      position: relative;
+
+      background: @menu-bg-color;
+      text-align: center;
+      border-top: 1px solid @border-color;
+      text-transform: uppercase;
+
+      &:hover{
+        a{
+          color: @link-regular-color;
+          display: inline-block;
+          width: 100%;
+        }
+      }
+
+
+
+      &:last-of-type{
+        margin-right:0;
+      }
+
+
+      &--active-link {
+
+        &:hover{
+         a{
+           color: @icon-bg-color;
+         }
+        }
+        a {
+          &:hover {
+            opacity: 1;
+            cursor: default;
+
+          }
+        }
+      }
+
+      &--na {
+
+        &:hover{
+          a{
+            color: @icon-bg-color;
+          }
+        }
+
+        a {
+          opacity: .3;
+          cursor: default;
+          &:hover {
+            opacity: .3;
+          }
+        }
+      }
+    }
+
+
+
+
+
+
+
+
+    }
+
+
+
+/*
+tablet style
+*/
+
+@media ( min-width: 768px) {
+
+  .main-header {
+
+
+    &__navigation {
+      position: relative;
+    }
+
+    &__navigation-list {
+      padding: 0;
+
+
+    }
+
+    &__list-item{
+
+
+      &:last-child{
+        margin-right:0;
+      }
+    }
+  }
+
+  /*
+  desktop style
+  */
+  @media ( min-width: 1200px) {
+
+    .main-header {
+      padding: 0 10%;
+      display: flex;
+      align-items: center;
+      height: 110px;
+
+      &__navigation{
+        display: flex;
+        justify-content: space-between;
+
+      }
+
+      &__logo > a{
+        display: block;
+        width: 145px;
+        height: 40px;
+        
+        background: url("../img/Pink-logo-2@1x.png") no-repeat center;
+        
+        &:hover{
+          background: url("../img/pink_logo2.png");
+        }
+      }
+
+      &__navigation-list {
+        display: flex!important;
+
+      }
+
+      &__icon-menu{
+        display: none!important;
+      }
+
+      &__list-item {
+          margin-right: 60px;
+          border: none;
+        text-transform: capitalize;
+
+        &:hover{
+
+          border-bottom: 2px solid @icon-bg-color;
+          height: 53px;
+
+          a{
+            color: @icon-bg-color;
+          }
+        }
+
+
+        &:active{
+
+          border-bottom: none;
+          a{
+            opacity: .3;
+          }
+        }
+
+
+          &--active-link {
+
+            &:hover{
+              border-bottom: none;
+            }
+
+            a {
+
+              &:hover {
+                opacity: 1;
+                cursor: default;
+              }
+            }
+          }
+
+          &--na {
+
+            &:hover{
+              border-bottom: none;
+            }
+            a {
+              opacity: .3;
+              cursor: default;
+              &:hover {
+                opacity: .3;
+              }
+            }
+          }
+        }
+
+         }
+  }
+}
+
+
