@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Жилой комплекс Мегискон</title>
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/slick.css" rel="stylesheet">
+    <link href="css/slick-theme.css" rel="stylesheet">
+    <link href="css/jquery.fancybox.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic,cyrillic-ext" rel="stylesheet">
+  </head>
+  <body>
+    <!--fixed navigation bar start-->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container container-header">
+        <div class="col-md-8 col-sm-12 col-lg-7 toggle-right">
+          <div class="navbar-header" id="header-logo">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a href="#"> <img src="img/my-city.png" alt="Агентство недвижимости Мой Город"
+              title="Агентство недвижимости Мой Город" width="160" height="50"></a>
+            <div class="vertical-line hidden-xs"></div>
+          </div>
+          <div class="navbar-collapse collapse ">
+            <ul class="nav navbar-nav menu-left">
+              <li class="dropdown ">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Продажа <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Квартиры</a></li>
+                  <li><a href="#">Аппартаменты</a></li>
+                  <li><a href="#">Коттеджи</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Аренда</a></li>
+              <li><a href="#">Объекты</a></li>
+              <li><a href="#">Агенты</a></li>
+              <li><a href="#">О нас</a></li>
+            </ul>
+          </div>
+          <!--/.nav-collapse -->
+        </div>
+        <div class="pull-right text-right col-md-4 contacts-header">
+          <div class="btn-group ">
+            <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            USD <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#">RUB</a></li>
+            </ul>
+          </div>
+          <span class="telephone ">
+          +7 (978) 070 14 25
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class=" promo">
+      <div class="container">
+        <div class="row">
+          <div class="img-flats-number">
+            <span>36</span><br> квартир
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 title-flats-wrapper">
+            <span class="title-flats">КВАРТИРЫ</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 title-coreiz-wrapper">
+            <span class="title-coreiz">В КОРЕИЗЕ</span>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid  promo-bottom-text">
+        <div class="container overall">
+          <div class="col-md-6 col-sm-6 col-xs-12 bottom-left-text">
+            <span> ПЛОЩАДЬ<br>  КВАРТИР </span> ОТ <span>50</span> М <sup>2</sup>
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-12 bottom-right-text">
+            ПОСТРОЕН / СДАН
+          </div>
+        </div>
+      </div>
+      <div class="megiston">
+        <a href="#"> <img src="img/megiston.png" width="301" height="112" alt="Жилой комплекс Мегистон" title="Жилой комплекс Мегистон"></a>
+        <p> Новый многоквартирный дом “Мегистон”
+          отвечающий современным стандартам строительства имеет
+          лаконичный и выдержанный дизайн.
+        </p>
+      </div>
+    </div>
+    <!--promo block end-->
+    <div class="container description-wrap">
+      <div class="row description">
+        <div class="col-md-6">
+          <!-- Carousel start -->
+          <div id="promo-slider" class="carousel slide" data-interval="3000" data-ride="carousel">
+            <!-- Слайды карусели -->
+            <div class="carousel-inner">
+              <!-- Слайды создаются с помощью контейнера с классом item, внутри которого помещается содержимое слайда -->
+              <div class="active item" data-lnk="img/big-house.jpg">
+                <img class="slider2-img" src="img/house.jpg" alt="" data-lnk="img/big-house2.jpg">
+              </div>
+              <!-- Слайд №2 -->
+              <div class="item" data-lnk="img/big-house.jpg">
+                <img class="slider2-img" src="img/house2.jpg" alt="" data-lnk="img/big-house3.jpg">
+              </div>
+              <!-- Слайд №3 -->
+              <div class="item" data-lnk="img/big-house.jpg">
+                <img class="slider2-img" src="img/house3.jpg" alt="" data-lnk="img/big-house.jpg">
+              </div>
+            </div>
+            <!-- Навигация для карусели -->
+            <!-- Кнопка, осуществляющая переход на предыдущий слайд с помощью атрибута data-slide="prev" -->
+            <a class="carousel-control left" href="#promo-slider" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <!-- Кнопка, осуществляющая переход на следующий слайд с помощью атрибута data-slide="next" -->
+            <a class="carousel-control right" href="#promo-slider" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+            <a class="lnk-fancy fancybox" href="img/big-house.jpg"></a>
+          </div>
+        </div>
+        <!--Carousel end-->
+        <div class="col-md-6 description-text">
+          <article>
+            <h2 class="description-title">
+              О ДОМЕ
+            </h2>
+            <p>
+              Жилой дом “Мегистон” расположен на территории пгт. Кореиз по соседству
+              с большой парковой зоной санатория «Мисхор», «Дюльбер», «Морской Прибой».
+              Красивая природа, многочисленные архитектурные достопримечательности и благотворный
+              морской климат - пожалуй, главные богатства, которыми вы сможете пользоваться
+              круглый год. Этот старинный поселок курортного типа находится на южном берегу
+              Крымского полуострова, всего в 12 километрах от шумной Ялты.
+            </p>
+          </article>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid advantages-block">
+      <div class="row advantages-block">
+        <div class="bg-bottom hidden-sm hidden-xs"></div>
+        <div class="container container-media-100per">
+          <div class="col-md-3 advantage-text">
+            <div class="advantages">
+              <div class="inner-img advantage1"></div>
+            </div>
+            <span>150 метров <br>
+            до заповедника</span>
+          </div>
+          <div class="col-md-3 advantage-text">
+            <div class="advantages ">
+              <div class="inner-img advantage2"></div>
+            </div>
+            <span>Вид на Море <br>
+            и горы</span>
+          </div>
+          <div class="col-md-3 advantage-text">
+            <div class="advantages ">
+              <div class="inner-img advantage3"></div>
+            </div>
+            <span> Отрытый  <br>
+            бассейн</span>
+          </div>
+          <div class="col-md-3 advantage-text">
+            <div class="advantages ">
+              <div class="inner-img advantage4"></div>
+            </div>
+            <span>Охраняемая <br>
+            парковка</span>
+          </div>
+        </div>
+      </div>
+      <button class="order ">    ЗАКАЗАТЬ ОСМОТР ОБЪЕКТА </button>
+    </div>
+    <p class="plan"> ПЛАНИРОВОЧНЫЕ РЕШЕНИЯ</p>
+    <p class="square"> Площадь квартир от 50 кв.м</p>
+    <div class="container-fluid slider1-wrapper">
+      <div class="slick-slider1"  data-slick='{"slidesToShow": 3, "slidesToScroll": 1}'>
+        <div>
+          <img src="img/flat1_cr.jpg" alt="">
+        </div>
+        <div>
+          <img src="img/flat2_cr.jpg" alt="">
+        </div>
+        <div>
+          <img src="img/flat3_cr.jpg" alt="">
+        </div>
+        <div>
+          <img src="img/flat1_cr.jpg" alt="">
+        </div>
+        <div>
+          <img src="img/flat2_cr.jpg" alt="">
+        </div>
+        <div>
+          <img src="img/flat3_cr.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="call-block floor-title">2 ЭТАЖ</div>
+    <div class="container-fluid table-block-bg">
+      <div class="container table-block">
+        <div class="row">
+          <div class="col-md-12 ">
+            <h2 class="table-title"> цены</h2>
+            <div class="table-wrap">
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <td>Этаж</td>
+                      <td>№</td>
+                      <td>Площадь<br> КВ.М</td>
+                      <td>Площадь терассы <br> КВ.М (коэфф. 0,7)</td>
+                      <td>Стоимость <br>У.Е</td>
+                      <td>Комментарий</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>0</td>
+                      <td>1п</td>
+                      <td>10</td>
+                      <td>нет</td>
+                      <td>1 040 000</td>
+                      <td>паркинг уличный</td>
+                    </tr>
+                    <tr>
+                      <td>0</td>
+                      <td>2п</td>
+                      <td>16</td>
+                      <td>13,7</td>
+                      <td>1 200 000</td>
+                      <td>паркинг</td>
+                    </tr>
+                    <tr>
+                      <td>0</td>
+                      <td>3п</td>
+                      <td>20</td>
+                      <td>15,4</td>
+                      <td>650 000</td>
+                      <td>паркинг</td>
+                    </tr>
+                    <tr>
+                      <td>0</td>
+                      <td>4п</td>
+                      <td>20,5</td>
+                      <td>-</td>
+                      <td>930 000</td>
+                      <td>паркинг</td>
+                    </tr>
+                    <tr>
+                      <td>0</td>
+                      <td>5п</td>
+                      <td>10</td>
+                      <td>нет</td>
+                      <td>1 040 000</td>
+                      <td>паркинг уличный</td>
+                    </tr>
+                    <tr>
+                      <td>0</td>
+                      <td>6п</td>
+                      <td>16</td>
+                      <td>13,7</td>
+                      <td>1 200 000</td>
+                      <td>паркинг</td>
+                    </tr>
+                    <tr>
+                      <td>0</td>
+                      <td>7п</td>
+                      <td>20</td>
+                      <td>15,4</td>
+                      <td>950 000</td>
+                      <td>паркинг</td>
+                    </tr>
+                    <tr>
+                      <td>0</td>
+                      <td>8п</td>
+                      <td>20,5</td>
+                      <td>-</td>
+                      <td>630 000</td>
+                      <td>паркинг</td>
+                    </tr>
+                    <tr>
+                      <td>0</td>
+                      <td>9п</td>
+                      <td>10</td>
+                      <td>нет</td>
+                      <td>1 040 000</td>
+                      <td>паркинг уличный</td>
+                    </tr>
+                    <tr>
+                      <td>0</td>
+                      <td>10п</td>
+                      <td>16</td>
+                      <td>13,7</td>
+                      <td>1 200 000</td>
+                      <td>паркинг</td>
+                    </tr>
+                    <tr>
+                      <td>0</td>
+                      <td>11п</td>
+                      <td>20,5</td>
+                      <td>-</td>
+                      <td>630 000</td>
+                      <td>паркинг</td>
+                    </tr>
+                    <tr>
+                      <td>0</td>
+                      <td>12п</td>
+                      <td>10</td>
+                      <td>нет</td>
+                      <td>1 040 000</td>
+                      <td>паркинг уличный</td>
+                    </tr>
+                    <tr>
+                      <td>0</td>
+                      <td>13п</td>
+                      <td>16</td>
+                      <td>13,7</td>
+                      <td>1 200 000</td>
+                      <td>паркинг</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <button class="table-btn"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="table-gradient hidden-xs"></div>
+    </div>
+    <div class="container panorama-block">
+      <h3 class="panorama-title">ПАНОРАМА 360</h3>
+      <div class="panorama-wrapper">
+        <img src="img/panorama.jpg" alt="">
+      </div>
+    </div>
+    <div class="container-fluid map-block">
+      <h2 class="map-title"> МЕСТОПОЛОЖЕНИЕ</h2>
+      <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=_6TIGCeHZHY-dEGyHC-MzYAXZieCd-8p&amp;width=100%&amp;height=560&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
+    </div>
+    <div class="container-fluid contact-block">
+      <div class="container ">
+        <div class="row"><span class="question">ОСТАЛИСЬ ВОПРОСЫ?</span></div>
+        <div class="row call-block">Звоните</div>
+        <div class="row tel">+7 (978) 070 14 25</div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <h2 class="objects-title"> Вас могут заинтересовать</h2>
+      <div class="bg-top hidden-xs hidden-sm"></div>
+      <div class="row objects-block">
+        <div class="container container-media-100per">
+          <div class="col-md-4 object-text">
+            <img src="img/tropa.png" alt="Жилой комплекс ЦАРСКАЯ ТРОПА" width="140" height="80">
+            <div class="objects object1">
+              <a href="">ЦАРСКАЯ ТРОПА</a>
+            </div>
+          </div>
+          <div class="col-md-4 object-text" id="padding-other">
+            <img src="img/vertigo.png" alt="клубный дом ВЕРТИГО" title="клубный дом ВЕРТИГО" width="140"
+              height="101">
+            <div class="objects object2">
+              <a href="">ВЕРТИГО</a>
+            </div>
+          </div>
+          <div class="col-md-4 object-text">
+            <img src="img/izumrud.png" alt="Коттеджный комплекс ИЗУМРУДНЫЙ" title="Коттеджный комплекс ИЗУМРУДНЫЙ"
+              width="153" height="74">
+            <div class="objects object3">
+              <a href=""> ИЗУМРУДНЫЙ</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 hidden-sm hidden-xs">
+            <a href="#"> <img src="img/footer-logo.png" alt="Агентство недвижимости Мой Город"  title="Агентство недвижимости Мой Город" width="266" height="105"></a>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12 footer-menu">
+            <ul class="footer-list">
+              <li><a href="#">Продажа</a></li>
+              <li><a href="#">Объекты</a></li>
+              <li><a href="#">Агенты</a></li>
+              <li><a href="#">О нас</a></li>
+            </ul>
+            <span class="copyright"> COPYRIGHT &copy 2016</span>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12 col-lg-3 pull-right footer-contacts">
+            <span class="footer-telephone"> +7 (978) 070 14 25</span> <br>
+            <span class="footer-email">  andrey@moi-gorod.org</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/slick.js"></script>
+    <script type="text/javascript" src="js/jquery.fancybox.js"></script>
+    <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>
