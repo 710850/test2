@@ -1,0 +1,97 @@
+/*general styles start*/
+
+
+body{
+  font-family: @font, sans-serif;
+}
+
+@font-face {
+  font-family: NewBaskervilleC;
+  src: url("../fonts/NewBaskervilleC.ttf");
+}
+
+.clearfix:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+figure{
+  height: 200px;
+}
+
+
+
+
+div.lazy, img.lazy {
+  width: 300px;
+  height: 200px;
+  display: block;
+}
+
+.lazy{
+  iframe{
+    width: 300px!important;
+    height: 200px!important;
+  }
+}
+
+
+
+
+.fancybox-skin{
+  padding: 0!important;
+  -webkit-box-shadow: none!important;
+  -moz-box-shadow: none!important;
+  box-shadow: none!important;
+}
+
+.fancybox-overlay{
+  background: rgba(0,0,0,.6);
+}
+
+.fancybox-close{
+  opacity:.3;
+  top: 10px;
+  right: 10px;
+  width:28px;
+  height:28px;
+  background: url("../img/svg_sprite_items/close.svg") no-repeat center;
+
+  &:hover{
+    opacity:.6;
+  }
+}
+
+/*_______________svg___________*/
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.icon-logo {
+  width: 0.72em;
+}
+
+
+
+@media (min-width:768px) {
+  .fancybox-close {
+
+    top:-36px;
+    right:-36px;
+  }
+}

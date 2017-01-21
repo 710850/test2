@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Adventure</title>
+        <link href="css/reset.css" rel="stylesheet">
+        <link href="css/jquery.fancybox.css" rel="stylesheet">
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet/less" type="text/less" href="less/style.less">
+        <link rel="stylesheet" href="css/filtrify.css">
+
+        <script src="js/less.js"></script>
+
+
+    </head>
+    <body>
+
+
+     <header class="main-header">
+            <div class="container">
+                <div class="main-header__logo-block">
+                    <div class="main-header__logo-img-wrap">
+                        <a href="#" class="main-header__logo">
+                            <svg class="main-header__logo-icon" width="41" height="57">
+                                <use xlink:href="img/svg_sprite.svg#icon-logo"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="main-header__logo-text-wrap">
+                        <span class="main-header__site-name">adventure</span>
+                        <p class="main-header__logo-slogan">
+                            оставь свой след, где его еще нет...
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+                <button class="main-header__menu-btn main-header__menu-btn--close " role="button" type="button">
+                    <svg width="24" height="24">
+                        <use xlink:href="img/svg_sprite.svg#icon-cross"></use>
+                    </svg>
+                </button>
+
+                <button class="main-header__menu-btn main-header__menu-btn--open" role="button" type="button">
+                    <svg width="24" height="24">
+                        <use xlink:href="img/svg_sprite.svg#icon-menu"></use>
+                    </svg>
+                </button>
+
+        </header>
+
+
+   <main class="content">
+
+                <nav class="menu">
+                    <div class="menu__container">
+                        <ul class="menu__navigation-list">
+                            <li class="menu__list-item menu__list-item&#45;&#45;active"><a>все страны</a></li>
+                            <li class="menu__list-item"><a href="#">культура</a></li>
+                            <li class="menu__list-item menu__list-item--disabled"><a href="#">экстрим</a></li>
+                            <li class="menu__list-item "><a href="#">атмосфера</a></li>
+                            <li class="menu__list-item menu__list-item--disabled"><a href="#">люди</a></li>
+<!--
+                            <li id="placeHolder"></li>
+-->
+                        </ul>
+                    </div>
+                </nav>
+
+
+              <section class="content__block">
+
+                      <div class="content__container">
+
+                          <div class="content__container-inner">
+                              <div class="slider" data-country="cuba" id="cuba">
+                                  <div class="slider__content">
+
+                                      <div class="slider__item">
+                                          <figure>
+                                              <picture>
+                                                  <source media="(min-width:1024px)"
+                                                          srcset="content/img/cuba/cuba_x2.jpg">
+                                                  <img class="slider__img"
+                                                       src="content/img/cuba/cuba.jpg"
+                                                       width="600" height="400"
+                                                       srcset="content/img/cuba/cuba_x2.jpg 1200w,
+                                                                                                content/img/cuba/cuba.jpg 600w,
+                                                                                                content/img/cuba/cuba_x2.jpg 2x
+                                                                                                "
+                                                       alt="Cuba"
+                                                       title="Cuba"
+                                                  >
+                                              </picture>
+                                              <figcaption class="slider__title">cuba</figcaption>
+                                          </figure>
+                                      </div>
+
+                                      <div class="slider__item slider__item--text-block">
+                                          <p class="slider__text">
+                                              Хэмингуэй, став весьма знаменитым, естественно, мог выбрать любое место
+                                              в мире. Почему же он 22 года прожил
+                                              в Гаване? Потому что это свобода!
+                                          </p>
+
+                                          <h2 class="slider__name">cuba</h2>
+                                      </div>
+
+                                      <div class="slider__item">
+                                          <picture>
+                                              <source media="(min-width:1024px)"
+                                                      srcset="content/img/cuba/cuba_car_x2.jpg">
+                                              <img class="slider__img"
+                                                   src="content/img/cuba/cuba_car.jpg"
+                                                   width="600" height="400"
+                                                   srcset="content/img/cuba/cuba_car_x2.jpg 1200w,
+                                                                                                content/img/cuba/cuba_car.jpg 600w,
+                                                                                                content/img/cuba/cuba_car_x2.jpg 2x
+                                                                                                "
+                                                   alt="car in Cuba"
+                                                   title="car in Cuba"
+                                              >
+                                          </picture>
+                                          <h2 class="slider__name">cuba</h2>
+                                          <a class="lnk-fancy fancybox slider__btn"
+                                             href="content/img/cuba/cuba_car_x2.jpg">
+                                              <svg class="slider__media-btn" width="42" height="42">
+                                                  <use xlink:href="img/svg_sprite.svg#icon_zoom"></use>
+                                              </svg>
+                                          </a>
+                                      </div>
+
+                                      <div class="slider__item">
+                                          <picture>
+                                              <source media="(min-width:1024px)"
+                                                      srcset="content/img/cuba/cuba_girl_x2.jpg">
+                                              <img class="slider__img"
+                                                   src="content/img/cuba/cuba_girl.jpg"
+                                                   width="600" height="400"
+                                                   srcset="content/img/cuba/cuba_girl_x2.jpg 1200w,
+                                                                                                content/img/cuba/cuba_girl.jpg 600w"
+                                                   alt="girl in Cuba"
+                                                   title="girl in Cuba"
+                                              >
+                                          </picture>
+                                          <h2 class="slider__name">cuba</h2>
+                                          <a class="video slider__btn" title="The Falltape"
+                                             href="https://www.youtube.com/watch?v=i-HYtAy7ezU">
+                                              <svg class="slider__media-btn" width="42" height="42">
+                                                  <use xlink:href="img/svg_sprite.svg#icon_play"></use>
+                                              </svg>
+                                          </a>
+                                      </div>
+                                  </div>
+
+                                  <div class="slider__control-bar">
+                                      <button class="slider__control-btn slider__control-btn&#45;&#45;prev prev">
+                                          <svg class="slider__svg-icon" width="24" height="24">
+                                              <use xlink:href="img/svg_sprite.svg#icon-prev_slide"></use>
+                                          </svg>
+                                      </button>
+                                      <button class="slider__control-btn slider__control-btn&#45;&#45;next next">
+                                          <svg class="slider__svg-icon" width="24" height="24">
+                                              <use xlink:href="img/svg_sprite.svg#icon-next_slide"></use>
+                                          </svg>
+                                      </button>
+                                  </div>
+                              </div>
+
+                              <div class="slider" data-country="russia" id="russia">
+                                  <div class="slider__content">
+
+                                      <div class="slider__item">
+                                          <figure>
+                                              <picture>
+                                                  <source media="(min-width:1024px)"
+                                                          srcset="content/img/russia/rus1_x2.jpg">
+                                                  <img class="slider__img"
+                                                       src="content/img/russia/rus1.jpg"
+                                                       width="600" height="400"
+                                                       srcset="content/img/russia/rus1_x2.jpg 1200w,
+                                                                                                content/img/russia/rus1.jpg 600w,
+                                                                                                content/img/russia/rus1_x2.jpg 2x
+                                                                                                "
+                                                       alt="Russia"
+                                                       title="Russia"
+                                                  >
+                                              </picture>
+                                              <figcaption class="slider__title">russia</figcaption>
+                                          </figure>
+                                      </div>
+
+                                      <div class="slider__item slider__item--text-block">
+                                          <p class="slider__text">
+                                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis,
+                                              repellat.
+                                          </p>
+
+                                          <h2 class="slider__name">russia</h2>
+                                      </div>
+
+                                      <div class="slider__item">
+                                          <picture>
+                                              <source media="(min-width:1024px)"
+                                                      srcset="content/img/russia/rus2_x2.jpg">
+                                              <img class="slider__img"
+                                                   src="content/img/russia/rus2.jpg"
+                                                   width="600" height="400"
+                                                   srcset="content/img/russia/rus2_x2.jpg 1200w,
+                                                                                                content/img/russia/rus2.jpg 600w,
+                                                                                                content/img/russia/rus2_x2.jpg 2x
+                                                                                                "
+                                                   alt="Russia"
+                                                   title="Russia"
+                                              >
+                                          </picture>
+                                          <h2 class="slider__name">russia</h2>
+                                          <a class="lnk-fancy fancybox slider__btn"
+                                             href="content/img/russia/rus2_x2.jpg">
+                                              <svg class="slider__media-btn" width="42" height="42">
+                                                  <use xlink:href="img/svg_sprite.svg#icon_zoom"></use>
+                                              </svg>
+                                          </a>
+                                      </div>
+
+                                      <div class="slider__item">
+                                          <picture>
+                                              <source media="(min-width:1024px)"
+                                                      srcset="content/img/russia/rus3_x2.jpg">
+                                              <img class="slider__img"
+                                                   src="content/img/russia/rus3.jpg"
+                                                   width="600" height="400"
+                                                   srcset="content/img/russia/rus2_x3.jpg 1200w,
+                                                                                                content/img/russia/rus3.jpg 600w,
+                                                                                                content/img/russia/rus3_x2.jpg 2x
+                                                                                                "
+                                                   alt="Russia"
+                                                   title="Russia"
+                                              >
+                                          </picture>
+                                          <h2 class="slider__name">russia</h2>
+                                          <a class="video slider__btn" title="Russia-video"
+                                             href="https://www.youtube.com/watch?v=i-HYtAy7ezU">
+                                              <svg class="slider__media-btn" width="42" height="42">
+                                                  <use xlink:href="img/svg_sprite.svg#icon_play"></use>
+                                              </svg>
+                                          </a>
+                                      </div>
+                                  </div>
+
+                                  <div class="slider__control-bar">
+                                      <button class="slider__control-btn slider__control-btn&#45;&#45;prev prev">
+                                          <svg class="slider__svg-icon" width="24" height="24">
+                                              <use xlink:href="img/svg_sprite.svg#icon-prev_slide"></use>
+                                          </svg>
+                                      </button>
+                                      <button class="slider__control-btn slider__control-btn&#45;&#45;next next">
+                                          <svg class="slider__svg-icon" width="24" height="24">
+                                              <use xlink:href="img/svg_sprite.svg#icon-next_slide"></use>
+                                          </svg>
+                                      </button>
+                                  </div>
+                              </div>
+                              <div class="slider slider--large" data-country="latin_america" id="latin_america">
+                                  <div class="slider__content">
+
+                                      <div class="slider__item slider__item--large">
+                                          <figure>
+                                              <picture>
+                                                  <source media="(min-width:1024px)"
+                                                          srcset="content/img/latin_america/latinam1_x2.jpg">
+                                                  <img class="slider__img slider__img--large"
+                                                       src="content/img/latin_america/latinam1.jpg"
+                                                       width="600" height="400"
+                                                       srcset="content/img/latin_america/latinam1_x2.jpg 1200w,
+                                                                                                content/img/latin_america/latinam1.jpg 600w,
+                                                                                                content/img/latin_america/latinam1_x2.jpg 2x
+                                                                                                "
+                                                       alt="latin_america"
+                                                       title="latin_america"
+                                                  >
+                                              </picture>
+                                              <figcaption class="slider__title">latin_america</figcaption>
+                                          </figure>
+                                      </div>
+
+                                      <div class="slider__item slider__item--text-block">
+                                          <p class="slider__text">
+                                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis,
+                                              repellat.
+                                          </p>
+
+                                          <h2 class="slider__name">latin_america</h2>
+                                      </div>
+
+                                      <div class="slider__item">
+                                          <picture>
+                                              <source media="(min-width:1024px)"
+                                                      srcset="content/img/latin_america/latinam2_x2.jpg">
+                                              <img class="slider__img slider__img--large"
+                                                   src="content/img/latin_america/latinam2.jpg"
+                                                   width="600" height="400"
+                                                   srcset="content/img/latin_america/latinam2_x2.jpg 1200w,
+                                                                                                content/img/latin_america/latinam2.jpg 600w,
+                                                                                                content/img/latin_america/latinam2_x2.jpg 2x
+                                                                                                "
+                                                   alt="latin_america"
+                                                   title="latin_america"
+                                              >
+                                          </picture>
+                                          <h2 class="slider__name">latin_america</h2>
+                                          <a class="lnk-fancy fancybox slider__btn"
+                                             href="content/img/latin_america/latinam2_x2.jpg">
+                                              <svg class="slider__media-btn" width="42" height="42">
+                                                  <use xlink:href="img/svg_sprite.svg#icon_zoom"></use>
+                                              </svg>
+                                          </a>
+                                      </div>
+
+                                      <div class="slider__item">
+                                          <picture>
+                                              <source media="(min-width:1024px)"
+                                                      srcset="content/img/latin_america/latinam3_x2.jpg">
+                                              <img class="slider__img slider__img--large"
+                                                   src="content/img/latin_america/latinam3.jpg"
+                                                   width="600" height="400"
+                                                   srcset="content/img/latin_america/latinam2_x3.jpg 1200w,
+                                                                                                content/img/latin_america/latinam3.jpg 600w,
+                                                                                                content/img/latin_america/latinam3_x2.jpg 2x
+                                                                                                "
+                                                   alt="latin_america"
+                                                   title="latin_america"
+                                              >
+                                          </picture>
+                                          <h2 class="slider__name">latin_america</h2>
+                                          <a class="video slider__btn" title="latin_america-video"
+                                             href="https://www.youtube.com/watch?v=i-HYtAy7ezU">
+                                              <svg class="slider__media-btn" width="42" height="42">
+                                                  <use xlink:href="img/svg_sprite.svg#icon_play"></use>
+                                              </svg>
+                                          </a>
+                                      </div>
+                                  </div>
+
+                                  <div class="slider__control-bar">
+                                      <button class="slider__control-btn slider__control-btn&#45;&#45;prev prev">
+                                          <svg class="slider__svg-icon" width="24" height="24">
+                                              <use xlink:href="img/svg_sprite.svg#icon-prev_slide"></use>
+                                          </svg>
+                                      </button>
+                                      <button class="slider__control-btn slider__control-btn&#45;&#45;next next">
+                                          <svg class="slider__svg-icon" width="24" height="24">
+                                              <use xlink:href="img/svg_sprite.svg#icon-next_slide"></use>
+                                          </svg>
+                                      </button>
+                                  </div>
+                              </div>
+
+                              <div class="slider" data-country="england" id="england">
+                                  <div class="slider__content">
+
+                                      <div class="slider__item">
+                                          <figure>
+                                              <picture>
+                                                  <source media="(min-width:1024px)"
+                                                          srcset="content/img/england/en1_x2.jpg">
+                                                  <img class="slider__img"
+                                                       src="content/img/england/en1.jpg"
+                                                       width="600" height="400"
+                                                       srcset="content/img/england/en1_x2.jpg 1200w,
+                                                                                                content/img/england/en1.jpg 600w,
+                                                                                                content/img/england/en1_x2.jpg 2x
+                                                                                                "
+                                                       alt="England"
+                                                       title="England"
+                                                  >
+                                              </picture>
+                                              <figcaption class="slider__title">england</figcaption>
+                                          </figure>
+                                      </div>
+
+                                      <div class="slider__item slider__item--text-block">
+                                          <p class="slider__text">
+                                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, ipsam.
+                                          </p>
+
+                                          <h2 class="slider__name">england</h2>
+                                      </div>
+
+                                      <div class="slider__item">
+                                          <picture>
+                                              <source media="(min-width:1024px)"
+                                                      srcset="content/img/england/en2_x2.jpg">
+                                              <img class="slider__img"
+                                                   src="content/img/england/en2.jpg"
+                                                   width="600" height="400"
+                                                   srcset="content/img/england/en2_x2.jpg 1200w,
+                                                                                                content/img/england/en2.jpg 600w,
+                                                                                                content/img/england/en2_x2.jpg 2x
+                                                                                                "
+                                                   alt="england"
+                                                   title="england"
+                                              >
+                                          </picture>
+                                          <h2 class="slider__name">england</h2>
+                                          <a class="lnk-fancy fancybox slider__btn"
+                                             href="content/img/england/en2_x2.jpg">
+                                              <svg class="slider__media-btn" width="42" height="42">
+                                                  <use xlink:href="img/svg_sprite.svg#icon_zoom"></use>
+                                              </svg>
+                                          </a>
+                                      </div>
+
+                                      <div class="slider__item">
+                                          <picture>
+                                              <source media="(min-width:1024px)"
+                                                      srcset="content/img/england/en3_x2.jpg">
+                                              <img class="slider__img"
+                                                   src="content/img/england/en3.jpg"
+                                                   width="600" height="400"
+                                                   srcset="content/img/england/en2_x3.jpg 1200w,
+                                                                                                content/img/england/en3.jpg 600w,
+                                                                                                content/img/england/en3_x2.jpg 2x
+                                                                                                "
+                                                   alt="england"
+                                                   title="england"
+                                              >
+                                          </picture>
+                                          <h2 class="slider__name">england</h2>
+                                          <a class="video slider__btn" title="england-video"
+                                             href="https://www.youtube.com/watch?v=i-HYtAy7ezU">
+                                              <svg class="slider__media-btn" width="42" height="42">
+                                                  <use xlink:href="img/svg_sprite.svg#icon_play"></use>
+                                              </svg>
+                                          </a>
+                                      </div>
+                                  </div>
+
+                                  <div class="slider__control-bar">
+                                      <button class="slider__control-btn slider__control-btn&#45;&#45;prev prev">
+                                          <svg class="slider__svg-icon" width="24" height="24">
+                                              <use xlink:href="img/svg_sprite.svg#icon-prev_slide"></use>
+                                          </svg>
+                                      </button>
+                                      <button class="slider__control-btn slider__control-btn&#45;&#45;next next">
+                                          <svg class="slider__svg-icon" width="24" height="24">
+                                              <use xlink:href="img/svg_sprite.svg#icon-next_slide"></use>
+                                          </svg>
+                                      </button>
+                                  </div>
+                              </div>
+
+                              <div class="slider" data-country="norway" id="norway">
+                                  <div class="slider__content">
+
+                                      <div class="slider__item">
+                                          <figure>
+                                              <picture>
+                                                  <source media="(min-width:1024px)"
+                                                          srcset="content/img/norway/nor1_x2.jpg">
+                                                  <img class="slider__img"
+                                                       src="content/img/norway/nor1.jpg"
+                                                       width="600" height="400"
+                                                       srcset="content/img/norway/nor1_x2.jpg 1200w,
+                                                                                                content/img/norway/nor1.jpg 600w,
+                                                                                                content/img/norway/nor1_x2.jpg 2x
+                                                                                                "
+                                                       alt="norway"
+                                                       title="norway"
+                                                  >
+                                              </picture>
+                                              <figcaption class="slider__title">norway</figcaption>
+                                          </figure>
+                                      </div>
+
+                                      <div class="slider__item slider__item--text-block">
+                                          <p class="slider__text">
+                                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur,
+                                              quam.
+                                          </p>
+
+                                          <h2 class="slider__name">norway</h2>
+                                      </div>
+
+                                      <div class="slider__item">
+                                          <picture>
+                                              <source media="(min-width:1024px)"
+                                                      srcset="content/img/norway/nor2_x2.jpg">
+                                              <img class="slider__img"
+                                                   src="content/img/norway/nor2.jpg"
+                                                   width="600" height="400"
+                                                   srcset="content/img/norway/nor2_x2.jpg 1200w,
+                                                                                                content/img/norway/nor2.jpg 600w,
+                                                                                                content/img/norway/nor2_x2.jpg 2x
+                                                                                                "
+                                                   alt="norway"
+                                                   title="norway"
+                                              >
+                                          </picture>
+                                          <h2 class="slider__name">norway</h2>
+                                          <a class="lnk-fancy fancybox slider__btn"
+                                             href="content/img/norway/nor3_x2.jpg">
+                                              <svg class="slider__media-btn" width="42" height="42">
+                                                  <use xlink:href="img/svg_sprite.svg#icon_zoom"></use>
+                                              </svg>
+                                          </a>
+                                      </div>
+
+                                      <div class="slider__item">
+                                          <picture>
+                                              <source media="(min-width:1024px)"
+                                                      srcset="content/img/norway/nor3_x2.jpg">
+                                              <img class="slider__img"
+                                                   src="content/img/norway/nor3.jpg"
+                                                   width="600" height="400"
+                                                   srcset="content/img/norway/nor3_x2.jpg 1200w,
+                                                                                                content/img/norway/nor3.jpg 600w,
+                                                                                                content/img/norway/nor3_x2.jpg 2x
+                                                                                                "
+                                                   alt="norway"
+                                                   title="norway"
+                                              >
+                                          </picture>
+                                          <h2 class="slider__name">norway</h2>
+                                          <a class="video slider__btn" title="norway-video"
+                                             href="https://www.youtube.com/watch?v=i-HYtAy7ezU">
+                                              <svg class="slider__media-btn" width="42" height="42">
+                                                  <use xlink:href="img/svg_sprite.svg#icon_play"></use>
+                                              </svg>
+                                          </a>
+                                      </div>
+                                  </div>
+
+                                  <div class="slider__control-bar">
+                                      <button class="slider__control-btn slider__control-btn&#45;&#45;prev prev">
+                                          <svg class="slider__svg-icon" width="24" height="24">
+                                              <use xlink:href="img/svg_sprite.svg#icon-prev_slide"></use>
+                                          </svg>
+                                      </button>
+                                      <button class="slider__control-btn slider__control-btn&#45;&#45;next next">
+                                          <svg class="slider__svg-icon" width="24" height="24">
+                                              <use xlink:href="img/svg_sprite.svg#icon-next_slide"></use>
+                                          </svg>
+                                      </button>
+                                  </div>
+                              </div>
+
+
+
+                              <div class="slider" data-country="switzerland" id="switzerland">
+                                  <div class="slider__content">
+
+                                      <div class="slider__item">
+                                          <figure>
+                                              <picture>
+                                                  <source media="(min-width:1024px)"
+                                                          srcset="content/img/switzerland/swiss1_x2.jpg">
+                                                  <img class="slider__img"
+                                                       src="content/img/switzerland/swiss1.jpg"
+                                                       width="600" height="400"
+                                                       srcset="content/img/switzerland/swiss1_x2.jpg 1200w,
+                                                                                                content/img/switzerland/swiss1.jpg 600w,
+                                                                                                content/img/switzerland/swiss1_x2.jpg 2x
+                                                                                                "
+                                                       alt="switzerland"
+                                                       title="switzerland"
+                                                  >
+                                              </picture>
+                                              <figcaption class="slider__title">switzerland</figcaption>
+                                          </figure>
+                                      </div>
+
+                                      <div class="slider__item slider__item--text-block">
+                                          <p class="slider__text">
+                                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur,
+                                              quam.
+                                          </p>
+
+                                          <h2 class="slider__name">switzerland</h2>
+                                      </div>
+
+                                      <div class="slider__item">
+                                          <picture>
+                                              <source media="(min-width:1024px)"
+                                                      srcset="content/img/switzerland/swiss2_x2.jpg">
+                                              <img class="slider__img"
+                                                   src="content/img/switzerland/swiss2.jpg"
+                                                   width="600" height="400"
+                                                   srcset="content/img/switzerland/swiss2_x2.jpg 1200w,
+                                                                                                content/img/switzerland/swiss2.jpg 600w,
+                                                                                                content/img/switzerland/swiss2_x2.jpg 2x
+                                                                                                "
+                                                   alt="switzerland"
+                                                   title="switzerland"
+                                              >
+                                          </picture>
+                                          <h2 class="slider__name">switzerland</h2>
+                                          <a class="lnk-fancy fancybox slider__btn"
+                                             href="content/img/switzerland/swiss3_x2.jpg">
+                                              <svg class="slider__media-btn" width="42" height="42">
+                                                  <use xlink:href="img/svg_sprite.svg#icon_zoom"></use>
+                                              </svg>
+                                          </a>
+                                      </div>
+
+                                      <div class="slider__item">
+                                          <picture>
+                                              <source media="(min-width:1024px)"
+                                                      srcset="content/img/switzerland/swiss3_x2.jpg">
+                                              <img class="slider__img"
+                                                   src="content/img/switzerland/swiss3.jpg"
+                                                   width="600" height="400"
+                                                   srcset="content/img/switzerland/swiss3_x2.jpg 1200w,
+                                                                                                content/img/switzerland/swiss3.jpg 600w,
+                                                                                                content/img/switzerland/swiss3_x2.jpg 2x
+                                                                                                "
+                                                   alt="switzerland"
+                                                   title="switzerland"
+                                              >
+                                          </picture>
+                                          <h2 class="slider__name">switzerland</h2>
+                                          <a class="video slider__btn" title="switzerland-video"
+                                             href="https://www.youtube.com/watch?v=i-HYtAy7ezU">
+                                              <svg class="slider__media-btn" width="42" height="42">
+                                                  <use xlink:href="img/svg_sprite.svg#icon_play"></use>
+                                              </svg>
+                                          </a>
+                                      </div>
+                                  </div>
+
+                                  <div class="slider__control-bar">
+                                      <button class="slider__control-btn slider__control-btn&#45;&#45;prev prev">
+                                          <svg class="slider__svg-icon" width="24" height="24">
+                                              <use xlink:href="img/svg_sprite.svg#icon-prev_slide"></use>
+                                          </svg>
+                                      </button>
+                                      <button class="slider__control-btn slider__control-btn&#45;&#45;next next">
+                                          <svg class="slider__svg-icon" width="24" height="24">
+                                              <use xlink:href="img/svg_sprite.svg#icon-next_slide"></use>
+                                          </svg>
+                                      </button>
+                                  </div>
+                              </div>
+
+                              <div class="slider" data-country="china" id="china">
+                                  <div class="slider__content">
+
+                                      <div class="slider__item">
+                                          <figure>
+                                              <picture>
+                                                  <source media="(min-width:1024px)"
+                                                          srcset="content/img/china/chin1_x2.jpg">
+                                                  <img class="slider__img"
+                                                       src="content/img/china/chin1.jpg"
+                                                       width="600" height="400"
+                                                       srcset="content/img/china/chin1_x2.jpg 1200w,
+                                                                                                content/img/china/chin1.jpg 600w,
+                                                                                                content/img/china/chin1_x2.jpg 2x
+                                                                                                "
+                                                       alt="china"
+                                                       title="china"
+                                                  >
+                                              </picture>
+                                              <figcaption class="slider__title">china</figcaption>
+                                          </figure>
+                                      </div>
+
+                                      <div class="slider__item slider__item--text-block">
+                                          <p class="slider__text">
+                                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur,
+                                              quam.
+                                          </p>
+
+                                          <h2 class="slider__name">china</h2>
+                                      </div>
+
+                                      <div class="slider__item">
+                                          <picture>
+                                              <source media="(min-width:1024px)"
+                                                      srcset="content/img/china/chin2_x2.jpg">
+                                              <img class="slider__img"
+                                                   src="content/img/china/chin2.jpg"
+                                                   width="600" height="400"
+                                                   srcset="content/img/china/chin2_x2.jpg 1200w,
+                                                                                                content/img/china/chin2.jpg 600w,
+                                                                                                content/img/china/chin2_x2.jpg 2x
+                                                                                                "
+                                                   alt="china"
+                                                   title="china"
+                                              >
+                                          </picture>
+                                          <h2 class="slider__name">china</h2>
+                                          <a class="lnk-fancy fancybox slider__btn"
+                                             href="content/img/china/chin3_x2.jpg">
+                                              <svg class="slider__media-btn" width="42" height="42">
+                                                  <use xlink:href="img/svg_sprite.svg#icon_zoom"></use>
+                                              </svg>
+                                          </a>
+                                      </div>
+
+                                      <div class="slider__item">
+                                          <picture>
+                                              <source media="(min-width:1024px)"
+                                                      srcset="content/img/china/chin3_x2.jpg">
+                                              <img class="slider__img"
+                                                   src="content/img/china/chin3.jpg"
+                                                   width="600" height="400"
+                                                   srcset="content/img/china/chin3_x2.jpg 1200w,
+                                                                                                content/img/china/chin3.jpg 600w,
+                                                                                                content/img/china/chin3_x2.jpg 2x
+                                                                                                "
+                                                   alt="china"
+                                                   title="china"
+                                              >
+                                          </picture>
+                                          <h2 class="slider__name">china</h2>
+                                          <a class="video slider__btn" title="china-video"
+                                             href="https://www.youtube.com/watch?v=i-HYtAy7ezU">
+                                              <svg class="slider__media-btn" width="42" height="42">
+                                                  <use xlink:href="img/svg_sprite.svg#icon_play"></use>
+                                              </svg>
+                                          </a>
+                                      </div>
+                                  </div>
+
+                                  <div class="slider__control-bar">
+                                      <button class="slider__control-btn slider__control-btn&#45;&#45;prev prev">
+                                          <svg class="slider__svg-icon" width="24" height="24">
+                                              <use xlink:href="img/svg_sprite.svg#icon-prev_slide"></use>
+                                          </svg>
+                                      </button>
+                                      <button class="slider__control-btn slider__control-btn&#45;&#45;next next">
+                                          <svg class="slider__svg-icon" width="24" height="24">
+                                              <use xlink:href="img/svg_sprite.svg#icon-next_slide"></use>
+                                          </svg>
+                                      </button>
+                                  </div>
+                              </div>
+
+                              <div class="slider" data-country="germany" id="germany">
+                                  <div class="slider__content">
+
+                                      <div class="slider__item">
+                                          <figure>
+                                              <picture>
+                                                  <source media="(min-width:1024px)"
+                                                          srcset="content/img/germany/ger1_x2.jpg">
+                                                  <img class="slider__img"
+                                                       src="content/img/germany/ger1.jpg"
+                                                       width="600" height="400"
+                                                       srcset="content/img/germany/ger1_x2.jpg 1200w,
+                                                                                                content/img/germany/ger1.jpg 600w,
+                                                                                                content/img/germany/ger1_x2.jpg 2x
+                                                                                                "
+                                                       alt="germany"
+                                                       title="germany"
+                                                  >
+                                              </picture>
+                                              <figcaption class="slider__title">germany</figcaption>
+                                          </figure>
+                                      </div>
+
+                                      <div class="slider__item slider__item--text-block">
+                                          <p class="slider__text">
+                                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur,
+                                              quam.
+                                          </p>
+
+                                          <h2 class="slider__name">germany</h2>
+                                      </div>
+
+                                      <div class="slider__item">
+                                          <picture>
+                                              <source media="(min-width:1024px)"
+                                                      srcset="content/img/germany/ger2_x2.jpg">
+                                              <img class="slider__img"
+                                                   src="content/img/germany/ger2.jpg"
+                                                   width="600" height="400"
+                                                   srcset="content/img/germany/ger2_x2.jpg 1200w,
+                                                                                                content/img/germany/ger2.jpg 600w,
+                                                                                                content/img/germany/ger2_x2.jpg 2x
+                                                                                                "
+                                                   alt="germany"
+                                                   title="germany"
+                                              >
+                                          </picture>
+                                          <h2 class="slider__name">germany</h2>
+                                          <a class="lnk-fancy fancybox slider__btn"
+                                             href="content/img/germany/ger3_x2.jpg">
+                                              <svg class="slider__media-btn" width="42" height="42">
+                                                  <use xlink:href="img/svg_sprite.svg#icon_zoom"></use>
+                                              </svg>
+                                          </a>
+                                      </div>
+
+                                      <div class="slider__item">
+                                          <picture>
+                                              <source media="(min-width:1024px)"
+                                                      srcset="content/img/germany/ger3_x2.jpg">
+                                              <img class="slider__img"
+                                                   src="content/img/germany/ger3.jpg"
+                                                   width="600" height="400"
+                                                   srcset="content/img/germany/ger3_x2.jpg 1200w,
+                                                                                                content/img/germany/ger3.jpg 600w,
+                                                                                                content/img/germany/ger3_x2.jpg 2x
+                                                                                                "
+                                                   alt="germany"
+                                                   title="germany"
+                                              >
+                                          </picture>
+                                          <h2 class="slider__name">germany</h2>
+                                          <a class="video slider__btn" title="germany-video"
+                                             href="https://www.youtube.com/watch?v=i-HYtAy7ezU">
+                                              <svg class="slider__media-btn" width="42" height="42">
+                                                  <use xlink:href="img/svg_sprite.svg#icon_play"></use>
+                                              </svg>
+                                          </a>
+                                      </div>
+                                  </div>
+
+                                  <div class="slider__control-bar">
+                                      <button class="slider__control-btn slider__control-btn&#45;&#45;prev prev">
+                                          <svg class="slider__svg-icon" width="24" height="24">
+                                              <use xlink:href="img/svg_sprite.svg#icon-prev_slide"></use>
+                                          </svg>
+                                      </button>
+                                      <button class="slider__control-btn slider__control-btn&#45;&#45;next next">
+                                          <svg class="slider__svg-icon" width="24" height="24">
+                                              <use xlink:href="img/svg_sprite.svg#icon-next_slide"></use>
+                                          </svg>
+                                      </button>
+                                  </div>
+                              </div>
+
+                              <div class="slider" data-country="japan" id="japan">
+                                  <div class="slider__content">
+
+                                      <div class="slider__item">
+                                          <figure>
+                                              <picture>
+                                                  <source media="(min-width:1024px)"
+                                                          srcset="content/img/japan/jap1_x2.jpg">
+                                                  <img class="slider__img"
+                                                       src="content/img/japan/jap1.jpg"
+                                                       width="600" height="400"
+                                                       srcset="content/img/japan/jap1_x2.jpg 1200w,
+                                                                                                content/img/japan/jap1.jpg 600w,
+                                                                                                content/img/japan/jap1_x2.jpg 2x
+                                                                                                "
+                                                       alt="japan"
+                                                       title="japan"
+                                                  >
+                                              </picture>
+                                              <figcaption class="slider__title">japan</figcaption>
+                                          </figure>
+                                      </div>
+
+                                      <div class="slider__item slider__item--text-block">
+                                          <p class="slider__text">
+                                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur,
+                                              quam.
+                                          </p>
+
+                                          <h2 class="slider__name">japan</h2>
+                                      </div>
+
+                                      <div class="slider__item">
+                                          <picture>
+                                              <source media="(min-width:1024px)" srcset="content/img/japan/jap2_x2.jpg">
+                                              <img class="slider__img"
+                                                   src="content/img/japan/jap2.jpg"
+                                                   width="600" height="400"
+                                                   srcset="content/img/japan/jap2_x2.jpg 1200w,
+                                                                                                content/img/japan/jap2.jpg 600w,
+                                                                                                content/img/japan/jap2_x2.jpg 2x
+                                                                                                "
+                                                   alt="japan"
+                                                   title="japan"
+                                              >
+                                          </picture>
+                                          <h2 class="slider__name">japan</h2>
+                                          <a class="lnk-fancy fancybox slider__btn"
+                                             href="content/img/japan/jap3_x2.jpg">
+                                              <svg class="slider__media-btn" width="42" height="42">
+                                                  <use xlink:href="img/svg_sprite.svg#icon_zoom"></use>
+                                              </svg>
+                                          </a>
+                                      </div>
+
+                                      <div class="slider__item">
+                                          <picture>
+                                              <source media="(min-width:1024px)" srcset="content/img/japan/jap3_x2.jpg">
+                                              <img class="slider__img"
+                                                   src="content/img/japan/jap3.jpg"
+                                                   width="600" height="400"
+                                                   srcset="content/img/japan/jap3_x2.jpg 1200w,
+                                                                                                content/img/japan/jap3.jpg 600w,
+                                                                                                content/img/japan/jap3_x2.jpg 2x
+                                                                                                "
+                                                   alt="japan"
+                                                   title="japan"
+                                              >
+                                          </picture>
+                                          <h2 class="slider__name">japan</h2>
+                                          <a class="video slider__btn" title="japan-video"
+                                             href="https://www.youtube.com/watch?v=i-HYtAy7ezU">
+                                              <svg class="slider__media-btn" width="42" height="42">
+                                                  <use xlink:href="img/svg_sprite.svg#icon_play"></use>
+                                              </svg>
+                                          </a>
+                                      </div>
+                                  </div>
+
+                                  <div class="slider__control-bar">
+                                      <button class="slider__control-btn slider__control-btn&#45;&#45;prev prev">
+                                          <svg class="slider__svg-icon" width="24" height="24">
+                                              <use xlink:href="img/svg_sprite.svg#icon-prev_slide"></use>
+                                          </svg>
+                                      </button>
+                                      <button class="slider__control-btn slider__control-btn&#45;&#45;next next">
+                                          <svg class="slider__svg-icon" width="24" height="24">
+                                              <use xlink:href="img/svg_sprite.svg#icon-next_slide"></use>
+                                          </svg>
+                                      </button>
+                                  </div>
+                              </div>
+
+                              <div class="slider" data-country="australia" id="australia">
+                                  <div class="slider__content">
+
+                                      <div class="slider__item">
+                                          <figure>
+                                              <picture>
+                                                  <source media="(min-width:1024px)"
+                                                          srcset="content/img/australia/austral1_x2.jpg">
+                                                  <img class="slider__img"
+                                                       src="content/img/australia/austral1.jpg"
+                                                       width="600" height="400"
+                                                       srcset="content/img/australia/austral1_x2.jpg 1200w,
+                                                                                                content/img/australia/austral1.jpg 600w,
+                                                                                                content/img/australia/austral1_x2.jpg 2x
+                                                                                                "
+                                                       alt="australia"
+                                                       title="australia"
+                                                  >
+                                              </picture>
+                                              <figcaption class="slider__title">australia</figcaption>
+                                          </figure>
+                                      </div>
+
+                                      <div class="slider__item slider__item--text-block">
+                                          <p class="slider__text">
+                                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur,
+                                              quam.
+                                          </p>
+
+                                          <h2 class="slider__name">australia</h2>
+                                      </div>
+
+                                      <div class="slider__item">
+                                          <picture>
+                                              <source media="(min-width:1024px)"
+                                                      srcset="content/img/australia/austral2_x2.jpg">
+                                              <img class="slider__img"
+                                                   src="content/img/australia/austral2.jpg"
+                                                   width="600" height="400"
+                                                   srcset="content/img/australia/austral2_x2.jpg 1200w,
+                                                                                                content/img/australia/austral2.jpg 600w,
+                                                                                                content/img/australia/austral2_x2.jpg 2x
+                                                                                                "
+                                                   alt="australia"
+                                                   title="australia"
+                                              >
+                                          </picture>
+                                          <h2 class="slider__name">australia</h2>
+                                          <a class="lnk-fancy fancybox slider__btn"
+                                             href="content/img/australia/austral3_x2.jpg">
+                                              <svg class="slider__media-btn" width="42" height="42">
+                                                  <use xlink:href="img/svg_sprite.svg#icon_zoom"></use>
+                                              </svg>
+                                          </a>
+                                      </div>
+
+                                      <div class="slider__item">
+                                          <picture>
+                                              <source media="(min-width:1024px)"
+                                                      srcset="content/img/australia/austral3_x2.jpg">
+                                              <img class="slider__img"
+                                                   src="content/img/australia/austral3.jpg"
+                                                   width="600" height="400"
+                                                   srcset="content/img/australia/austral3_x2.jpg 1200w,
+                                                                                                content/img/australia/austral3.jpg 600w,
+                                                                                                content/img/australia/austral3_x2.jpg 2x
+                                                                                                "
+                                                   alt="australia"
+                                                   title="australia"
+                                              >
+                                          </picture>
+                                          <h2 class="slider__name">australia</h2>
+                                          <a class="video slider__btn" title="australia-video"
+                                             href="https://www.youtube.com/watch?v=i-HYtAy7ezU">
+                                              <svg class="slider__media-btn" width="42" height="42">
+                                                  <use xlink:href="img/svg_sprite.svg#icon_play"></use>
+                                              </svg>
+                                          </a>
+                                      </div>
+                                  </div>
+
+                                  <div class="slider__control-bar">
+                                      <button class="slider__control-btn slider__control-btn&#45;&#45;prev prev">
+                                          <svg class="slider__svg-icon" width="24" height="24">
+                                              <use xlink:href="img/svg_sprite.svg#icon-prev_slide"></use>
+                                          </svg>
+                                      </button>
+                                      <button class="slider__control-btn slider__control-btn&#45;&#45;next next">
+                                          <svg class="slider__svg-icon" width="24" height="24">
+                                              <use xlink:href="img/svg_sprite.svg#icon-next_slide"></use>
+                                          </svg>
+                                      </button>
+                                  </div>
+                              </div>
+
+                              <div class="slider" data-country="india" id="india">
+                                  <div class="slider__content">
+
+                                      <div class="slider__item">
+                                          <figure>
+                                              <picture>
+                                                  <source media="(min-width:1024px)"
+                                                          srcset="content/img/india/ind1_x2.jpg">
+                                                  <img class="slider__img"
+                                                       src="content/img/india/ind1.jpg"
+                                                       width="600" height="400"
+                                                       srcset="content/img/india/ind1_x2.jpg 1200w,
+                                                                                                content/img/india/ind1.jpg 600w,
+                                                                                                content/img/india/ind1_x2.jpg 2x
+                                                                                                "
+                                                       alt="india"
+                                                       title="india"
+                                                  >
+                                              </picture>
+                                              <figcaption class="slider__title">india</figcaption>
+                                          </figure>
+                                      </div>
+
+                                      <div class="slider__item slider__item--text-block">
+                                          <p class="slider__text">
+                                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur,
+                                              quam.
+                                          </p>
+
+                                          <h2 class="slider__name">india</h2>
+                                      </div>
+
+                                      <div class="slider__item">
+                                          <picture>
+                                              <source media="(min-width:1024px)" srcset="content/img/india/ind2_x2.jpg">
+                                              <img class="slider__img"
+                                                   src="content/img/india/ind2.jpg"
+                                                   width="600" height="400"
+                                                   srcset="content/img/india/ind2_x2.jpg 1200w,
+                                                                                                content/img/india/ind2.jpg 600w,
+                                                                                                content/img/india/ind2_x2.jpg 2x
+                                                                                                "
+                                                   alt="india"
+                                                   title="india"
+                                              >
+                                          </picture>
+                                          <h2 class="slider__name">india</h2>
+                                          <a class="lnk-fancy fancybox slider__btn"
+                                             href="content/img/india/ind3_x2.jpg">
+                                              <svg class="slider__media-btn" width="42" height="42">
+                                                  <use xlink:href="img/svg_sprite.svg#icon_zoom"></use>
+                                              </svg>
+                                          </a>
+                                      </div>
+
+                                      <div class="slider__item">
+                                          <picture>
+                                              <source media="(min-width:1024px)" srcset="content/img/india/ind3_x2.jpg">
+                                              <img class="slider__img"
+                                                   src="content/img/india/ind3.jpg"
+                                                   width="600" height="400"
+                                                   srcset="content/img/india/ind3_x2.jpg 1200w,
+                                                                                                content/img/india/ind3.jpg 600w,
+                                                                                                content/img/india/ind3_x2.jpg 2x
+                                                                                                "
+                                                   alt="india"
+                                                   title="india"
+                                              >
+                                          </picture>
+                                          <h2 class="slider__name">india</h2>
+                                          <a class="video slider__btn" title="india-video"
+                                             href="https://www.youtube.com/watch?v=i-HYtAy7ezU">
+                                              <svg class="slider__media-btn" width="42" height="42">
+                                                  <use xlink:href="img/svg_sprite.svg#icon_play"></use>
+                                              </svg>
+                                          </a>
+                                      </div>
+                                  </div>
+
+                                  <div class="slider__control-bar">
+                                      <button class="slider__control-btn slider__control-btn&#45;&#45;prev prev">
+                                          <svg class="slider__svg-icon" width="24" height="24">
+                                              <use xlink:href="img/svg_sprite.svg#icon-prev_slide"></use>
+                                          </svg>
+                                      </button>
+                                      <button class="slider__control-btn slider__control-btn&#45;&#45;next next">
+                                          <svg class="slider__svg-icon" width="24" height="24">
+                                              <use xlink:href="img/svg_sprite.svg#icon-next_slide"></use>
+                                          </svg>
+                                      </button>
+                                  </div>
+                              </div>
+
+                              <div class="slider" data-country="finland" id="finland">
+                                  <div class="slider__content">
+
+                                      <div class="slider__item">
+                                          <figure>
+                                              <picture>
+                                                  <source media="(min-width:1024px)"
+                                                          srcset="content/img/finland/fin1_x2.jpg">
+                                                  <img class="slider__img"
+                                                       src="content/img/finland/fin1.jpg"
+                                                       width="600" height="400"
+                                                       srcset="content/img/finland/fin1_x2.jpg 1200w,
+                                                                                                content/img/finland/fin1.jpg 600w,
+                                                                                                content/img/finland/fin1_x2.jpg 2x
+                                                                                                "
+                                                       alt="finland"
+                                                       title="finland"
+                                                  >
+                                              </picture>
+                                              <figcaption class="slider__title">finland</figcaption>
+                                          </figure>
+                                      </div>
+
+                                      <div class="slider__item slider__item--text-block">
+                                          <p class="slider__text">
+                                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur,
+                                              quam.
+                                          </p>
+
+                                          <h2 class="slider__name">finland</h2>
+                                      </div>
+
+                                      <div class="slider__item">
+                                          <picture>
+                                              <source media="(min-width:1024px)"
+                                                      srcset="content/img/finland/fin2_x2.jpg">
+                                              <img class="slider__img"
+                                                   src="content/img/finland/fin2.jpg"
+                                                   width="600" height="400"
+                                                   srcset="content/img/finland/fin2_x2.jpg 1200w,
+                                                                                                content/img/finland/fin2.jpg 600w,
+                                                                                                content/img/finland/fin2_x2.jpg 2x
+                                                                                                "
+                                                   alt="finland"
+                                                   title="finland"
+                                              >
+                                          </picture>
+                                          <h2 class="slider__name">finland</h2>
+                                          <a class="lnk-fancy fancybox slider__btn"
+                                             href="content/img/finland/fin3_x2.jpg">
+                                              <svg class="slider__media-btn" width="42" height="42">
+                                                  <use xlink:href="img/svg_sprite.svg#icon_zoom"></use>
+                                              </svg>
+                                          </a>
+                                      </div>
+
+                                      <div class="slider__item">
+                                          <picture>
+                                              <source media="(min-width:1024px)"
+                                                      srcset="content/img/finland/fin3_x2.jpg">
+                                              <img class="slider__img"
+                                                   src="content/img/finland/fin3.jpg"
+                                                   width="600" height="400"
+                                                   srcset="content/img/finland/fin3_x2.jpg 1200w,
+                                                                                                content/img/finland/fin3.jpg 600w,
+                                                                                                content/img/finland/fin3_x2.jpg 2x
+                                                                                                "
+                                                   alt="finland"
+                                                   title="finland"
+                                              >
+                                          </picture>
+                                          <h2 class="slider__name">finland</h2>
+                                          <a class="video slider__btn" title="finland-video"
+                                             href="https://www.youtube.com/watch?v=i-HYtAy7ezU">
+                                              <svg class="slider__media-btn" width="42" height="42">
+                                                  <use xlink:href="img/svg_sprite.svg#icon_play"></use>
+                                              </svg>
+                                          </a>
+                                      </div>
+                                  </div>
+
+                                  <div class="slider__control-bar">
+                                      <button class="slider__control-btn slider__control-btn&#45;&#45;prev prev">
+                                          <svg class="slider__svg-icon" width="24" height="24">
+                                              <use xlink:href="img/svg_sprite.svg#icon-prev_slide"></use>
+                                          </svg>
+                                      </button>
+                                      <button class="slider__control-btn slider__control-btn&#45;&#45;next next">
+                                          <svg class="slider__svg-icon" width="24" height="24">
+                                              <use xlink:href="img/svg_sprite.svg#icon-next_slide"></use>
+                                          </svg>
+                                      </button>
+                                  </div>
+                              </div>
+
+                              <div class="slider" data-country="new-zeland" id="new-zeland">
+                                  <div class="slider__content">
+
+                                      <div class="slider__item">
+                                          <figure>
+                                              <picture>
+                                                  <source media="(min-width:1024px)"
+                                                          srcset="content/img/new-zeland/newzel1_x2.jpg">
+                                                  <img class="slider__img"
+                                                       src="content/img/new-zeland/newzel1.jpg"
+                                                       width="600" height="400"
+                                                       srcset="content/img/new-zeland/newzel1_x2.jpg 1200w,
+                                                                                                content/img/new-zeland/newzel1.jpg 600w,
+                                                                                                content/img/new-zeland/newzel1_x2.jpg 2x
+                                                                                                "
+                                                       alt="new-zeland"
+                                                       title="new-zeland"
+                                                  >
+                                              </picture>
+                                              <figcaption class="slider__title">new-zeland</figcaption>
+                                          </figure>
+                                      </div>
+
+                                      <div class="slider__item slider__item--text-block">
+                                          <p class="slider__text">
+                                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur,
+                                              quam.
+                                          </p>
+
+                                          <h2 class="slider__name">new-zeland</h2>
+                                      </div>
+
+                                      <div class="slider__item">
+                                          <picture>
+                                              <source media="(min-width:1024px)"
+                                                      srcset="content/img/new-zeland/newzel2_x2.jpg">
+                                              <img class="slider__img"
+                                                   src="content/img/new-zeland/newzel2.jpg"
+                                                   width="600" height="400"
+                                                   srcset="content/img/new-zeland/newzel2_x2.jpg 1200w,
+                                                                                                content/img/new-zeland/newzel2.jpg 600w,
+                                                                                                content/img/new-zeland/newzel2_x2.jpg 2x
+                                                                                                "
+                                                   alt="new-zeland"
+                                                   title="new-zeland"
+                                              >
+                                          </picture>
+                                          <h2 class="slider__name">new-zeland</h2>
+                                          <a class="lnk-fancy fancybox slider__btn"
+                                             href="content/img/new-zeland/newzel3_x2.jpg">
+                                              <svg class="slider__media-btn" width="42" height="42">
+                                                  <use xlink:href="img/svg_sprite.svg#icon_zoom"></use>
+                                              </svg>
+                                          </a>
+                                      </div>
+
+                                      <div class="slider__item">
+                                          <picture>
+                                              <source media="(min-width:1024px)"
+                                                      srcset="content/img/new-zeland/newzel3_x2.jpg">
+                                              <img class="slider__img"
+                                                   src="content/img/new-zeland/newzel3.jpg"
+                                                   width="600" height="400"
+                                                   srcset="content/img/new-zeland/newzel3_x2.jpg 1200w,
+                                                                                                content/img/new-zeland/newzel3.jpg 600w,
+                                                                                                content/img/new-zeland/newzel3_x2.jpg 2x
+                                                                                                "
+                                                   alt="new-zeland"
+                                                   title="new-zeland"
+                                              >
+                                          </picture>
+                                          <h2 class="slider__name">new-zeland</h2>
+                                          <a class="video slider__btn" title="new-zeland-video"
+                                             href="https://www.youtube.com/watch?v=i-HYtAy7ezU">
+                                              <svg class="slider__media-btn" width="42" height="42">
+                                                  <use xlink:href="img/svg_sprite.svg#icon_play"></use>
+                                              </svg>
+                                          </a>
+                                      </div>
+                                  </div>
+
+                                  <div class="slider__control-bar">
+                                      <button class="slider__control-btn slider__control-btn&#45;&#45;prev prev">
+                                          <svg class="slider__svg-icon" width="24" height="24">
+                                              <use xlink:href="img/svg_sprite.svg#icon-prev_slide"></use>
+                                          </svg>
+                                      </button>
+                                      <button class="slider__control-btn slider__control-btn&#45;&#45;next next">
+                                          <svg class="slider__svg-icon" width="24" height="24">
+                                              <use xlink:href="img/svg_sprite.svg#icon-next_slide"></use>
+                                          </svg>
+                                      </button>
+                                  </div>
+                              </div>
+                          </div>
+
+                      </div>
+
+
+
+                </section>
+
+        </main>
+
+     <footer class="main-footer">
+         <div class="container clearfix">
+             <div class="main-footer__production-block">
+                 Здесь наследили
+
+                 <a href="#">
+                     CreativePeople
+                     <img src="img/creative_people.png" alt="creative-people" title="creative-people">
+                 </a>
+             </div>
+             <div class="main-footer__copyright-block">
+                &#169 2013-2015
+             </div>
+
+
+         </div>
+     </footer>
+
+
+
+     <div id="placeHolder"></div>
+
+     <ul id="container">
+         <li data-genre="Drama, Sci-Fi, Thriller" data-actors="Harrison Ford, Rutger Hauer, Sean Young, Edward James Olmos" data-director="Ridley Scott">
+             ... <img src="film.png" data-original="img/movies/BladeRunner.jpg" /> ...
+         </li>
+         <li data-genre="Action, Crime, Drama, Thriller" data-actors="Christian Bale, Michael Caine, Ken Watanabe, Liam Neeson" data-director="Christopher Nolan">
+             ... <img src="film.png" data-original="img/movies/BatmanBegins.jpg" /> ...
+         </li>
+         <li data-genre="Drama" data-actors="Mark Wahlberg, Julianne Moore, Burt Reynolds, Luis GuzmÃ¡n" data-director="Paul Thomas Anderson">
+             ... <img src="film.png" data-original="img/movies/BoogieNights.jpg" /> ...
+         </li>
+         ...
+     </ul>
+
+
+
+        <script src="js/jquery.fancybox.js"></script>
+        <script src="js/fancybox_customization.js"></script>
+   <!--     <script src="js/lazyload_customization.js"></script>-->
+<!--        <script src="js/slider.js"></script>-->
+     <script src="js/common.js"></script>
+
+
+
+
+     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+     <script src="js/highlight.pack.js"></script>
+     <script src="js/script.js"></script>
+     <script src="js/filtrify.min.js"></script>
+     <script src="js/jquery.lazyload.min.js"></script>
+
+     <script type="text/javascript">
+
+         $(function() {
+
+             /*
+              Extend jQuery with an "inview" selector to
+              select elements that are in the visible
+              part of the page (at least partiacialy)
+              */
+             $.extend($.expr[':'],{
+                 inview: function(el) {
+                     var e = $(el),
+                             w = $(window),
+                             wt = w.scrollTop(),
+                             wb = wt + w.height(),
+                             et = e.offset().top,
+                             eb = et + e.height();
+
+                     return ( (eb >= wt) && (et <= wb) );
+                 }
+             });
+
+             $("ul#container img").lazyload({
+                 event : "scroll filter",
+                 effect : "fadeIn"
+             });
+
+             $.filtrify("container", "placeHolder", {
+                 block : "data-original",
+                 callback : function( query, match, mismatch ) {
+                     $(match).find("img:inview").trigger("filter");
+                 }
+             });
+
+         });
+
+     </script>
+
+
+    </body>
+</html>
+
+
+
