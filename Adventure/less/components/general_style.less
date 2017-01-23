@@ -10,6 +10,12 @@ body{
   src: url("../fonts/NewBaskervilleC.ttf");
 }
 
+@font-face {
+  font-family: FontAwesome;
+  src: url("../fonts/fontawesome-webfont.woff");
+}
+
+
 .clearfix:after {
   content: '';
   clear: both;
@@ -20,7 +26,58 @@ figure{
   height: 200px;
 }
 
+.ft-label{
 
+  &:before{
+    width: 0!important;
+    opacity:0;
+
+
+  }
+
+  font-size: 0.875rem!important;
+  font-family: @font!important;
+  color: @logo-color!important;
+
+
+  &:after{
+    line-height: 40px;
+
+  }
+}
+
+.ft-menu{
+  text-align: center!important;
+  color: @menu-text-color!important;
+  color: @logo-color!important;
+
+
+}
+.ft-field{
+
+  &:before{
+    line-height:40px; }
+
+  margin-right: 0!important;
+
+
+}
+
+.ft-tags li{
+
+  background: @header_bg!important;
+  border-bottom: 3px solid @footer-text-color--lighter!important;
+  border-top:none!important;
+
+
+  &:hover{
+    background: @footer-text-color!important;
+  }
+
+  &:after{
+    opacity:0;
+  }
+}
 
 
 div.lazy, img.lazy {
@@ -88,10 +145,23 @@ Single-colored icons can be modified like so:
 
 
 
+
+
 @media (min-width:768px) {
   .fancybox-close {
 
     top:-36px;
     right:-36px;
   }
+
+  .ft-label{
+    font-size: 0.75rem!important;
+    color: @menu-text-color!important;
+    &:hover{
+      color: @menu-text-color--hover!important;
+
+    }
+  }
+
+
 }

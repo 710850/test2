@@ -5,14 +5,42 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Adventure</title>
+
+
         <link href="css/reset.css" rel="stylesheet">
         <link href="css/jquery.fancybox.css" rel="stylesheet">
         <link rel="shortcut icon" href="img/favicon.ico">
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet/less" type="text/less" href="less/style.less">
         <link rel="stylesheet" href="css/filtrify.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
 
-        <script src="js/less.js"></script>
+      <script src="js/less.js"></script>
+
+        <link rel="stylesheet" href="css/filtrify.css">
+<script src="js/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="js/highlight.pack.js"></script>
+        <script src="js/filtrify.min.js"></script>
+        <script src="js/jquery.lazyload.min.js"></script>
+        <script src="js/common.js"></script>
+      <script src="js/common2.js"></script>
+<!--
+
+        <script src="js/slider.js"></script>
+-->
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     </head>
@@ -20,7 +48,7 @@
 
 
      <header class="main-header">
-            <div class="container">
+            <div  class="container">
                 <div class="main-header__logo-block">
                     <div class="main-header__logo-img-wrap">
                         <a href="#" class="main-header__logo">
@@ -61,11 +89,10 @@
                             <li class="menu__list-item menu__list-item&#45;&#45;active"><a>все страны</a></li>
                             <li class="menu__list-item"><a href="#">культура</a></li>
                             <li class="menu__list-item menu__list-item--disabled"><a href="#">экстрим</a></li>
-                            <li class="menu__list-item "><a href="#">атмосфера</a></li>
+                            <li class="menu__list-item "><a href="#">атмосфера</a><i class="fa-li fa fa-check-square"></i></li>
                             <li class="menu__list-item menu__list-item--disabled"><a href="#">люди</a></li>
-<!--
-                            <li id="placeHolder"></li>
--->
+                            <li class="menu__list-item menu__list-item--filter" id="placeHolder"><i class="fa-li fa fa-check-square"></i></li>
+
                         </ul>
                     </div>
                 </nav>
@@ -75,24 +102,25 @@
 
                       <div class="content__container">
 
-                          <div class="content__container-inner">
-                              <div class="slider" data-country="cuba" id="cuba">
+                          <div class="content__container-inner" id="container">
+
+                              <div class="slider" data-страна="cuba" id="cuba">
                                   <div class="slider__content">
 
                                       <div class="slider__item">
                                           <figure>
                                               <picture>
-                                                  <source media="(min-width:1024px)"
-                                                          srcset="content/img/cuba/cuba_x2.jpg">
+
                                                   <img class="slider__img"
-                                                       src="content/img/cuba/cuba.jpg"
-                                                       width="600" height="400"
-                                                       srcset="content/img/cuba/cuba_x2.jpg 1200w,
-                                                                                                content/img/cuba/cuba.jpg 600w,
-                                                                                                content/img/cuba/cuba_x2.jpg 2x
-                                                                                                "
+                                                       src="img/preload.png"
+                                                       srcset="content/img/cuba/cuba_x2.jpg 2x"
+
+                                                       data-original="content/img/cuba/cuba.jpg"
+                                                       width="300" height="200"
+
                                                        alt="Cuba"
                                                        title="Cuba"
+
                                                   >
                                               </picture>
                                               <figcaption class="slider__title">cuba</figcaption>
@@ -111,14 +139,12 @@
 
                                       <div class="slider__item">
                                           <picture>
-                                              <source media="(min-width:1024px)"
-                                                      srcset="content/img/cuba/cuba_car_x2.jpg">
-                                              <img class="slider__img"
-                                                   src="content/img/cuba/cuba_car.jpg"
-                                                   width="600" height="400"
-                                                   srcset="content/img/cuba/cuba_car_x2.jpg 1200w,
-                                                                                                content/img/cuba/cuba_car.jpg 600w,
-                                                                                                content/img/cuba/cuba_car_x2.jpg 2x
+
+                                              <img class="slider__img" src="img/preload.png"
+
+                                                   data-original="content/img/cuba/cuba_car.jpg"
+                                                   width="300" height="200"
+                                                   srcset="content/img/cuba/cuba_car_x2.jpg 2x
                                                                                                 "
                                                    alt="car in Cuba"
                                                    title="car in Cuba"
@@ -135,13 +161,11 @@
 
                                       <div class="slider__item">
                                           <picture>
-                                              <source media="(min-width:1024px)"
-                                                      srcset="content/img/cuba/cuba_girl_x2.jpg">
-                                              <img class="slider__img"
-                                                   src="content/img/cuba/cuba_girl.jpg"
-                                                   width="600" height="400"
-                                                   srcset="content/img/cuba/cuba_girl_x2.jpg 1200w,
-                                                                                                content/img/cuba/cuba_girl.jpg 600w"
+
+                                              <img class="slider__img" src="img/preload.png"
+                                                   data-original="content/img/cuba/cuba_girl.jpg"
+                                                   width="300" height="200"
+                                                   srcset="content/img/cuba/cuba_girl_x2.jpg 2x"
                                                    alt="girl in Cuba"
                                                    title="girl in Cuba"
                                               >
@@ -170,23 +194,19 @@
                                   </div>
                               </div>
 
-                              <div class="slider" data-country="russia" id="russia">
+                              <div class="slider" data-страна="russia" id="russia">
                                   <div class="slider__content">
 
                                       <div class="slider__item">
                                           <figure>
                                               <picture>
-                                                  <source media="(min-width:1024px)"
-                                                          srcset="content/img/russia/rus1_x2.jpg">
                                                   <img class="slider__img"
-                                                       src="content/img/russia/rus1.jpg"
-                                                       width="600" height="400"
-                                                       srcset="content/img/russia/rus1_x2.jpg 1200w,
-                                                                                                content/img/russia/rus1.jpg 600w,
-                                                                                                content/img/russia/rus1_x2.jpg 2x
-                                                                                                "
+                                                       data-original="content/img/russia/rus1.jpg"
+                                                       width="300" height="200"
+                                                       srcset="content/img/russia/rus1_x2.jpg 2x"
                                                        alt="Russia"
                                                        title="Russia"
+                                                       src="img/preload.png"
                                                   >
                                               </picture>
                                               <figcaption class="slider__title">russia</figcaption>
@@ -204,14 +224,10 @@
 
                                       <div class="slider__item">
                                           <picture>
-                                              <source media="(min-width:1024px)"
-                                                      srcset="content/img/russia/rus2_x2.jpg">
-                                              <img class="slider__img"
-                                                   src="content/img/russia/rus2.jpg"
-                                                   width="600" height="400"
-                                                   srcset="content/img/russia/rus2_x2.jpg 1200w,
-                                                                                                content/img/russia/rus2.jpg 600w,
-                                                                                                content/img/russia/rus2_x2.jpg 2x
+                                              <img class="slider__img" src="img/preload.png"
+                                                   data-original="content/img/russia/rus2.jpg"
+                                                   width="300" height="200"
+                                                   srcset="content/img/russia/rus2_x2.jpg 2x
                                                                                                 "
                                                    alt="Russia"
                                                    title="Russia"
@@ -228,14 +244,10 @@
 
                                       <div class="slider__item">
                                           <picture>
-                                              <source media="(min-width:1024px)"
-                                                      srcset="content/img/russia/rus3_x2.jpg">
-                                              <img class="slider__img"
-                                                   src="content/img/russia/rus3.jpg"
-                                                   width="600" height="400"
-                                                   srcset="content/img/russia/rus2_x3.jpg 1200w,
-                                                                                                content/img/russia/rus3.jpg 600w,
-                                                                                                content/img/russia/rus3_x2.jpg 2x
+                                              <img class="slider__img" src="img/preload.png"
+                                                   data-original="content/img/russia/rus3.jpg"
+                                                   width="300" height="200"
+                                                   srcset="content/img/russia/rus3_x2.jpg 2x
                                                                                                 "
                                                    alt="Russia"
                                                    title="Russia"
@@ -264,115 +276,45 @@
                                       </button>
                                   </div>
                               </div>
-                              <div class="slider slider--large" data-country="latin_america" id="latin_america">
+
+                              <div class="slider slider--large" data-страна="latin_america" id="latin_america">
                                   <div class="slider__content">
 
                                       <div class="slider__item slider__item--large">
                                           <figure>
                                               <picture>
-                                                  <source media="(min-width:1024px)"
-                                                          srcset="content/img/latin_america/latinam1_x2.jpg">
                                                   <img class="slider__img slider__img--large"
-                                                       src="content/img/latin_america/latinam1.jpg"
-                                                       width="600" height="400"
-                                                       srcset="content/img/latin_america/latinam1_x2.jpg 1200w,
-                                                                                                content/img/latin_america/latinam1.jpg 600w,
-                                                                                                content/img/latin_america/latinam1_x2.jpg 2x
-                                                                                                "
+                                                       src="img/preload_large.png"
+                                                       data-original="content/img/latin_america/latinam1.jpg"
+                                                       width="620" height="420"
+                                                       srcset="content/img/latin_america/latinam1_x2.jpg 2x"
                                                        alt="latin_america"
                                                        title="latin_america"
                                                   >
                                               </picture>
-                                              <figcaption class="slider__title">latin_america</figcaption>
+                                              <figcaption class="slider__title slider__title--large">latin America</figcaption>
                                           </figure>
+                                          <ol class="slider__list">
+                                              <li><a href="#">Honduras</a></li>
+                                              <li><a href="#">Columbia</a></li>
+                                              <li><a href="#">Panama</a></li>
+                                              <li><a href="#">Brazil</a></li>
+                                              <li><a href="#">Peru</a></li>
+                                          </ol>
                                       </div>
-
-                                      <div class="slider__item slider__item--text-block">
-                                          <p class="slider__text">
-                                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis,
-                                              repellat.
-                                          </p>
-
-                                          <h2 class="slider__name">latin_america</h2>
-                                      </div>
-
-                                      <div class="slider__item">
-                                          <picture>
-                                              <source media="(min-width:1024px)"
-                                                      srcset="content/img/latin_america/latinam2_x2.jpg">
-                                              <img class="slider__img slider__img--large"
-                                                   src="content/img/latin_america/latinam2.jpg"
-                                                   width="600" height="400"
-                                                   srcset="content/img/latin_america/latinam2_x2.jpg 1200w,
-                                                                                                content/img/latin_america/latinam2.jpg 600w,
-                                                                                                content/img/latin_america/latinam2_x2.jpg 2x
-                                                                                                "
-                                                   alt="latin_america"
-                                                   title="latin_america"
-                                              >
-                                          </picture>
-                                          <h2 class="slider__name">latin_america</h2>
-                                          <a class="lnk-fancy fancybox slider__btn"
-                                             href="content/img/latin_america/latinam2_x2.jpg">
-                                              <svg class="slider__media-btn" width="42" height="42">
-                                                  <use xlink:href="img/svg_sprite.svg#icon_zoom"></use>
-                                              </svg>
-                                          </a>
-                                      </div>
-
-                                      <div class="slider__item">
-                                          <picture>
-                                              <source media="(min-width:1024px)"
-                                                      srcset="content/img/latin_america/latinam3_x2.jpg">
-                                              <img class="slider__img slider__img--large"
-                                                   src="content/img/latin_america/latinam3.jpg"
-                                                   width="600" height="400"
-                                                   srcset="content/img/latin_america/latinam2_x3.jpg 1200w,
-                                                                                                content/img/latin_america/latinam3.jpg 600w,
-                                                                                                content/img/latin_america/latinam3_x2.jpg 2x
-                                                                                                "
-                                                   alt="latin_america"
-                                                   title="latin_america"
-                                              >
-                                          </picture>
-                                          <h2 class="slider__name">latin_america</h2>
-                                          <a class="video slider__btn" title="latin_america-video"
-                                             href="https://www.youtube.com/watch?v=i-HYtAy7ezU">
-                                              <svg class="slider__media-btn" width="42" height="42">
-                                                  <use xlink:href="img/svg_sprite.svg#icon_play"></use>
-                                              </svg>
-                                          </a>
-                                      </div>
-                                  </div>
-
-                                  <div class="slider__control-bar">
-                                      <button class="slider__control-btn slider__control-btn&#45;&#45;prev prev">
-                                          <svg class="slider__svg-icon" width="24" height="24">
-                                              <use xlink:href="img/svg_sprite.svg#icon-prev_slide"></use>
-                                          </svg>
-                                      </button>
-                                      <button class="slider__control-btn slider__control-btn&#45;&#45;next next">
-                                          <svg class="slider__svg-icon" width="24" height="24">
-                                              <use xlink:href="img/svg_sprite.svg#icon-next_slide"></use>
-                                          </svg>
-                                      </button>
                                   </div>
                               </div>
 
-                              <div class="slider" data-country="england" id="england">
+                              <div class="slider" data-страна="england" id="england">
                                   <div class="slider__content">
 
                                       <div class="slider__item">
                                           <figure>
                                               <picture>
-                                                  <source media="(min-width:1024px)"
-                                                          srcset="content/img/england/en1_x2.jpg">
-                                                  <img class="slider__img"
-                                                       src="content/img/england/en1.jpg"
-                                                       width="600" height="400"
-                                                       srcset="content/img/england/en1_x2.jpg 1200w,
-                                                                                                content/img/england/en1.jpg 600w,
-                                                                                                content/img/england/en1_x2.jpg 2x
+                                                  <img class="slider__img" src="img/preload.png"
+                                                       data-original="content/img/england/en1.jpg"
+                                                       width="300" height="200"
+                                                       srcset="content/img/england/en1_x2.jpg 2x
                                                                                                 "
                                                        alt="England"
                                                        title="England"
@@ -392,14 +334,11 @@
 
                                       <div class="slider__item">
                                           <picture>
-                                              <source media="(min-width:1024px)"
-                                                      srcset="content/img/england/en2_x2.jpg">
                                               <img class="slider__img"
-                                                   src="content/img/england/en2.jpg"
-                                                   width="600" height="400"
-                                                   srcset="content/img/england/en2_x2.jpg 1200w,
-                                                                                                content/img/england/en2.jpg 600w,
-                                                                                                content/img/england/en2_x2.jpg 2x
+                                                   src="img/preload.png"
+                                                   data-original="content/img/england/en2.jpg"
+                                                   width="300" height="200"
+                                                   srcset="content/img/england/en2_x2.jpg 2x
                                                                                                 "
                                                    alt="england"
                                                    title="england"
@@ -416,14 +355,10 @@
 
                                       <div class="slider__item">
                                           <picture>
-                                              <source media="(min-width:1024px)"
-                                                      srcset="content/img/england/en3_x2.jpg">
-                                              <img class="slider__img"
-                                                   src="content/img/england/en3.jpg"
-                                                   width="600" height="400"
-                                                   srcset="content/img/england/en2_x3.jpg 1200w,
-                                                                                                content/img/england/en3.jpg 600w,
-                                                                                                content/img/england/en3_x2.jpg 2x
+                                              <img class="slider__img" src="img/preload.png"
+                                                   data-original="content/img/england/en3.jpg"
+                                                   width="300" height="200"
+                                                   srcset="content/img/england/en3_x2.jpg 2x
                                                                                                 "
                                                    alt="england"
                                                    title="england"
@@ -453,20 +388,16 @@
                                   </div>
                               </div>
 
-                              <div class="slider" data-country="norway" id="norway">
+                              <div class="slider slider--disabled" data-страна="norway" id="norway">
                                   <div class="slider__content">
 
                                       <div class="slider__item">
                                           <figure>
                                               <picture>
-                                                  <source media="(min-width:1024px)"
-                                                          srcset="content/img/norway/nor1_x2.jpg">
-                                                  <img class="slider__img"
-                                                       src="content/img/norway/nor1.jpg"
-                                                       width="600" height="400"
-                                                       srcset="content/img/norway/nor1_x2.jpg 1200w,
-                                                                                                content/img/norway/nor1.jpg 600w,
-                                                                                                content/img/norway/nor1_x2.jpg 2x
+                                                  <img class="slider__img" src="img/preload.png"
+                                                       data-original="content/img/norway/nor1.jpg"
+                                                       width="300" height="200"
+                                                       srcset="content/img/norway/nor1_x2.jpg 2x
                                                                                                 "
                                                        alt="norway"
                                                        title="norway"
@@ -487,14 +418,10 @@
 
                                       <div class="slider__item">
                                           <picture>
-                                              <source media="(min-width:1024px)"
-                                                      srcset="content/img/norway/nor2_x2.jpg">
-                                              <img class="slider__img"
-                                                   src="content/img/norway/nor2.jpg"
-                                                   width="600" height="400"
-                                                   srcset="content/img/norway/nor2_x2.jpg 1200w,
-                                                                                                content/img/norway/nor2.jpg 600w,
-                                                                                                content/img/norway/nor2_x2.jpg 2x
+                                              <img class="slider__img" src="img/preload.png"
+                                                   data-original="content/img/norway/nor2.jpg"
+                                                   width="300" height="200"
+                                                   srcset="content/img/norway/nor2_x2.jpg 2x
                                                                                                 "
                                                    alt="norway"
                                                    title="norway"
@@ -511,14 +438,10 @@
 
                                       <div class="slider__item">
                                           <picture>
-                                              <source media="(min-width:1024px)"
-                                                      srcset="content/img/norway/nor3_x2.jpg">
-                                              <img class="slider__img"
-                                                   src="content/img/norway/nor3.jpg"
-                                                   width="600" height="400"
-                                                   srcset="content/img/norway/nor3_x2.jpg 1200w,
-                                                                                                content/img/norway/nor3.jpg 600w,
-                                                                                                content/img/norway/nor3_x2.jpg 2x
+                                              <img class="slider__img" src="img/preload.png"
+                                                   data-original="content/img/norway/nor3.jpg"
+                                                   width="300" height="200"
+                                                   srcset="content/img/norway/nor3_x2.jpg 2x
                                                                                                 "
                                                    alt="norway"
                                                    title="norway"
@@ -534,7 +457,7 @@
                                       </div>
                                   </div>
 
-                                  <div class="slider__control-bar">
+                                  <div class="slider__control-bar slider__control-bar--disabled">
                                       <button class="slider__control-btn slider__control-btn&#45;&#45;prev prev">
                                           <svg class="slider__svg-icon" width="24" height="24">
                                               <use xlink:href="img/svg_sprite.svg#icon-prev_slide"></use>
@@ -548,22 +471,16 @@
                                   </div>
                               </div>
 
-
-
-                              <div class="slider" data-country="switzerland" id="switzerland">
+                              <div class="slider slider--disabled" data-страна="switzerland" id="switzerland">
                                   <div class="slider__content">
 
                                       <div class="slider__item">
                                           <figure>
                                               <picture>
-                                                  <source media="(min-width:1024px)"
-                                                          srcset="content/img/switzerland/swiss1_x2.jpg">
-                                                  <img class="slider__img"
-                                                       src="content/img/switzerland/swiss1.jpg"
-                                                       width="600" height="400"
-                                                       srcset="content/img/switzerland/swiss1_x2.jpg 1200w,
-                                                                                                content/img/switzerland/swiss1.jpg 600w,
-                                                                                                content/img/switzerland/swiss1_x2.jpg 2x
+                                                  <img class="slider__img" src="img/preload.png"
+                                                       data-original="content/img/switzerland/swiss1.jpg"
+                                                       width="300" height="200"
+                                                       srcset="content/img/switzerland/swiss1_x2.jpg 2x
                                                                                                 "
                                                        alt="switzerland"
                                                        title="switzerland"
@@ -584,14 +501,10 @@
 
                                       <div class="slider__item">
                                           <picture>
-                                              <source media="(min-width:1024px)"
-                                                      srcset="content/img/switzerland/swiss2_x2.jpg">
-                                              <img class="slider__img"
-                                                   src="content/img/switzerland/swiss2.jpg"
-                                                   width="600" height="400"
-                                                   srcset="content/img/switzerland/swiss2_x2.jpg 1200w,
-                                                                                                content/img/switzerland/swiss2.jpg 600w,
-                                                                                                content/img/switzerland/swiss2_x2.jpg 2x
+                                              <img class="slider__img" src="img/preload.png"
+                                                   data-original="content/img/switzerland/swiss2.jpg"
+                                                   width="300" height="200"
+                                                   srcset="content/img/switzerland/swiss2_x2.jpg 2x
                                                                                                 "
                                                    alt="switzerland"
                                                    title="switzerland"
@@ -608,14 +521,10 @@
 
                                       <div class="slider__item">
                                           <picture>
-                                              <source media="(min-width:1024px)"
-                                                      srcset="content/img/switzerland/swiss3_x2.jpg">
-                                              <img class="slider__img"
-                                                   src="content/img/switzerland/swiss3.jpg"
-                                                   width="600" height="400"
-                                                   srcset="content/img/switzerland/swiss3_x2.jpg 1200w,
-                                                                                                content/img/switzerland/swiss3.jpg 600w,
-                                                                                                content/img/switzerland/swiss3_x2.jpg 2x
+                                              <img class="slider__img" src="img/preload.png"
+                                                   data-original="content/img/switzerland/swiss3.jpg"
+                                                   width="300" height="200"
+                                                   srcset="content/img/switzerland/swiss3_x2.jpg 2x
                                                                                                 "
                                                    alt="switzerland"
                                                    title="switzerland"
@@ -631,7 +540,7 @@
                                       </div>
                                   </div>
 
-                                  <div class="slider__control-bar">
+                                  <div class="slider__control-bar slider__control-bar--disabled">
                                       <button class="slider__control-btn slider__control-btn&#45;&#45;prev prev">
                                           <svg class="slider__svg-icon" width="24" height="24">
                                               <use xlink:href="img/svg_sprite.svg#icon-prev_slide"></use>
@@ -645,21 +554,17 @@
                                   </div>
                               </div>
 
-                              <div class="slider" data-country="china" id="china">
+                              <div class="slider" data-страна="china" id="china">
                                   <div class="slider__content">
 
                                       <div class="slider__item">
                                           <figure>
                                               <picture>
-                                                  <source media="(min-width:1024px)"
-                                                          srcset="content/img/china/chin1_x2.jpg">
-                                                  <img class="slider__img"
-                                                       src="content/img/china/chin1.jpg"
-                                                       width="600" height="400"
-                                                       srcset="content/img/china/chin1_x2.jpg 1200w,
-                                                                                                content/img/china/chin1.jpg 600w,
-                                                                                                content/img/china/chin1_x2.jpg 2x
-                                                                                                "
+
+                                                  <img class="slider__img" src="img/preload.png"
+                                                       data-original="content/img/china/chin1.jpg"
+                                                       width="300" height="200"
+                                                       srcset="/img/china/chin1_x2.jpg 2x"
                                                        alt="china"
                                                        title="china"
                                                   >
@@ -679,18 +584,13 @@
 
                                       <div class="slider__item">
                                           <picture>
-                                              <source media="(min-width:1024px)"
-                                                      srcset="content/img/china/chin2_x2.jpg">
-                                              <img class="slider__img"
-                                                   src="content/img/china/chin2.jpg"
-                                                   width="600" height="400"
-                                                   srcset="content/img/china/chin2_x2.jpg 1200w,
-                                                                                                content/img/china/chin2.jpg 600w,
-                                                                                                content/img/china/chin2_x2.jpg 2x
-                                                                                                "
+                                              <img class="slider__img" src="img/preload.png"
+                                                   data-original="content/img/china/chin2.jpg"
+                                                   width="300" height="200"
+                                                   srcset="content/img/china/chin2_x2.jpg 2x"
                                                    alt="china"
-                                                   title="china"
-                                              >
+                                                   title="china">
+
                                           </picture>
                                           <h2 class="slider__name">china</h2>
                                           <a class="lnk-fancy fancybox slider__btn"
@@ -703,14 +603,10 @@
 
                                       <div class="slider__item">
                                           <picture>
-                                              <source media="(min-width:1024px)"
-                                                      srcset="content/img/china/chin3_x2.jpg">
-                                              <img class="slider__img"
-                                                   src="content/img/china/chin3.jpg"
-                                                   width="600" height="400"
-                                                   srcset="content/img/china/chin3_x2.jpg 1200w,
-                                                                                                content/img/china/chin3.jpg 600w,
-                                                                                                content/img/china/chin3_x2.jpg 2x
+                                              <img class="slider__img" src="img/preload.png"
+                                                   data-original="content/img/china/chin3.jpg"
+                                                   width="300" height="200"
+                                                   srcset="content/img/china/chin3_x2.jpg 2x
                                                                                                 "
                                                    alt="china"
                                                    title="china"
@@ -740,20 +636,16 @@
                                   </div>
                               </div>
 
-                              <div class="slider" data-country="germany" id="germany">
+                              <div class="slider" data-страна="germany" id="germany">
                                   <div class="slider__content">
 
                                       <div class="slider__item">
                                           <figure>
                                               <picture>
-                                                  <source media="(min-width:1024px)"
-                                                          srcset="content/img/germany/ger1_x2.jpg">
-                                                  <img class="slider__img"
-                                                       src="content/img/germany/ger1.jpg"
-                                                       width="600" height="400"
-                                                       srcset="content/img/germany/ger1_x2.jpg 1200w,
-                                                                                                content/img/germany/ger1.jpg 600w,
-                                                                                                content/img/germany/ger1_x2.jpg 2x
+                                                  <img class="slider__img" src="img/preload.png"
+                                                       data-original="content/img/germany/ger1.jpg"
+                                                       width="300" height="200"
+                                                       srcset="content/img/germany/ger1_x2.jpg 2x
                                                                                                 "
                                                        alt="germany"
                                                        title="germany"
@@ -774,14 +666,10 @@
 
                                       <div class="slider__item">
                                           <picture>
-                                              <source media="(min-width:1024px)"
-                                                      srcset="content/img/germany/ger2_x2.jpg">
-                                              <img class="slider__img"
-                                                   src="content/img/germany/ger2.jpg"
-                                                   width="600" height="400"
-                                                   srcset="content/img/germany/ger2_x2.jpg 1200w,
-                                                                                                content/img/germany/ger2.jpg 600w,
-                                                                                                content/img/germany/ger2_x2.jpg 2x
+                                              <img class="slider__img" src="img/preload.png"
+                                                   data-original="content/img/germany/ger2.jpg"
+                                                   width="300" height="200"
+                                                   srcset="content/img/germany/ger2_x2.jpg 2x
                                                                                                 "
                                                    alt="germany"
                                                    title="germany"
@@ -798,14 +686,10 @@
 
                                       <div class="slider__item">
                                           <picture>
-                                              <source media="(min-width:1024px)"
-                                                      srcset="content/img/germany/ger3_x2.jpg">
-                                              <img class="slider__img"
-                                                   src="content/img/germany/ger3.jpg"
-                                                   width="600" height="400"
-                                                   srcset="content/img/germany/ger3_x2.jpg 1200w,
-                                                                                                content/img/germany/ger3.jpg 600w,
-                                                                                                content/img/germany/ger3_x2.jpg 2x
+                                              <img class="slider__img" src="img/preload.png"
+                                                   data-original="content/img/germany/ger3.jpg"
+                                                   width="300" height="200"
+                                                   srcset="content/img/germany/ger3_x2.jpg 2x
                                                                                                 "
                                                    alt="germany"
                                                    title="germany"
@@ -835,20 +719,16 @@
                                   </div>
                               </div>
 
-                              <div class="slider" data-country="japan" id="japan">
+                              <div class="slider" data-страна="japan" id="japan">
                                   <div class="slider__content">
 
                                       <div class="slider__item">
                                           <figure>
                                               <picture>
-                                                  <source media="(min-width:1024px)"
-                                                          srcset="content/img/japan/jap1_x2.jpg">
-                                                  <img class="slider__img"
-                                                       src="content/img/japan/jap1.jpg"
-                                                       width="600" height="400"
-                                                       srcset="content/img/japan/jap1_x2.jpg 1200w,
-                                                                                                content/img/japan/jap1.jpg 600w,
-                                                                                                content/img/japan/jap1_x2.jpg 2x
+                                                  <img class="slider__img" src="img/preload.png"
+                                                       data-original="content/img/japan/jap1.jpg"
+                                                       width="300" height="200"
+                                                       srcset="content/img/japan/jap1_x2.jpg 2x
                                                                                                 "
                                                        alt="japan"
                                                        title="japan"
@@ -869,13 +749,10 @@
 
                                       <div class="slider__item">
                                           <picture>
-                                              <source media="(min-width:1024px)" srcset="content/img/japan/jap2_x2.jpg">
-                                              <img class="slider__img"
-                                                   src="content/img/japan/jap2.jpg"
-                                                   width="600" height="400"
-                                                   srcset="content/img/japan/jap2_x2.jpg 1200w,
-                                                                                                content/img/japan/jap2.jpg 600w,
-                                                                                                content/img/japan/jap2_x2.jpg 2x
+                                              <img class="slider__img" src="img/preload.png"
+                                                   data-original="content/img/japan/jap2.jpg"
+                                                   width="300" height="200"
+                                                   srcset="content/img/japan/jap2_x2.jpg 2x
                                                                                                 "
                                                    alt="japan"
                                                    title="japan"
@@ -892,13 +769,10 @@
 
                                       <div class="slider__item">
                                           <picture>
-                                              <source media="(min-width:1024px)" srcset="content/img/japan/jap3_x2.jpg">
-                                              <img class="slider__img"
-                                                   src="content/img/japan/jap3.jpg"
-                                                   width="600" height="400"
-                                                   srcset="content/img/japan/jap3_x2.jpg 1200w,
-                                                                                                content/img/japan/jap3.jpg 600w,
-                                                                                                content/img/japan/jap3_x2.jpg 2x
+                                              <img class="slider__img" src="img/preload.png"
+                                                   data-original="content/img/japan/jap3.jpg"
+                                                   width="300" height="200"
+                                                   srcset="content/img/japan/jap3_x2.jpg 2x
                                                                                                 "
                                                    alt="japan"
                                                    title="japan"
@@ -928,20 +802,16 @@
                                   </div>
                               </div>
 
-                              <div class="slider" data-country="australia" id="australia">
+                              <div class="slider slider--disabled" data-страна="australia" id="australia">
                                   <div class="slider__content">
 
                                       <div class="slider__item">
                                           <figure>
                                               <picture>
-                                                  <source media="(min-width:1024px)"
-                                                          srcset="content/img/australia/austral1_x2.jpg">
-                                                  <img class="slider__img"
-                                                       src="content/img/australia/austral1.jpg"
-                                                       width="600" height="400"
-                                                       srcset="content/img/australia/austral1_x2.jpg 1200w,
-                                                                                                content/img/australia/austral1.jpg 600w,
-                                                                                                content/img/australia/austral1_x2.jpg 2x
+                                                  <img class="slider__img" src="img/preload.png"
+                                                       data-original="content/img/australia/austral1.jpg"
+                                                       width="300" height="200"
+                                                       srcset="content/img/australia/austral1_x2.jpg 2x
                                                                                                 "
                                                        alt="australia"
                                                        title="australia"
@@ -962,14 +832,10 @@
 
                                       <div class="slider__item">
                                           <picture>
-                                              <source media="(min-width:1024px)"
-                                                      srcset="content/img/australia/austral2_x2.jpg">
-                                              <img class="slider__img"
-                                                   src="content/img/australia/austral2.jpg"
-                                                   width="600" height="400"
-                                                   srcset="content/img/australia/austral2_x2.jpg 1200w,
-                                                                                                content/img/australia/austral2.jpg 600w,
-                                                                                                content/img/australia/austral2_x2.jpg 2x
+                                              <img class="slider__img" src="img/preload.png"
+                                                   data-original="content/img/australia/austral2.jpg"
+                                                   width="300" height="200"
+                                                   srcset="content/img/australia/austral2_x2.jpg 2x
                                                                                                 "
                                                    alt="australia"
                                                    title="australia"
@@ -986,14 +852,10 @@
 
                                       <div class="slider__item">
                                           <picture>
-                                              <source media="(min-width:1024px)"
-                                                      srcset="content/img/australia/austral3_x2.jpg">
-                                              <img class="slider__img"
-                                                   src="content/img/australia/austral3.jpg"
-                                                   width="600" height="400"
-                                                   srcset="content/img/australia/austral3_x2.jpg 1200w,
-                                                                                                content/img/australia/austral3.jpg 600w,
-                                                                                                content/img/australia/austral3_x2.jpg 2x
+                                              <img class="slider__img" src="img/preload.png"
+                                                   data-original="content/img/australia/austral3.jpg"
+                                                   width="300" height="200"
+                                                   srcset="content/img/australia/austral3_x2.jpg 2x
                                                                                                 "
                                                    alt="australia"
                                                    title="australia"
@@ -1009,7 +871,7 @@
                                       </div>
                                   </div>
 
-                                  <div class="slider__control-bar">
+                                  <div class="slider__control-bar slider__control-bar--disabled">
                                       <button class="slider__control-btn slider__control-btn&#45;&#45;prev prev">
                                           <svg class="slider__svg-icon" width="24" height="24">
                                               <use xlink:href="img/svg_sprite.svg#icon-prev_slide"></use>
@@ -1023,20 +885,16 @@
                                   </div>
                               </div>
 
-                              <div class="slider" data-country="india" id="india">
+                              <div class="slider" data-страна="india" id="india">
                                   <div class="slider__content">
 
                                       <div class="slider__item">
                                           <figure>
                                               <picture>
-                                                  <source media="(min-width:1024px)"
-                                                          srcset="content/img/india/ind1_x2.jpg">
-                                                  <img class="slider__img"
-                                                       src="content/img/india/ind1.jpg"
-                                                       width="600" height="400"
-                                                       srcset="content/img/india/ind1_x2.jpg 1200w,
-                                                                                                content/img/india/ind1.jpg 600w,
-                                                                                                content/img/india/ind1_x2.jpg 2x
+                                                  <img class="slider__img" src="img/preload.png"
+                                                       data-original="content/img/india/ind1.jpg"
+                                                       width="300" height="200"
+                                                       srcset="content/img/india/ind1_x2.jpg 2x
                                                                                                 "
                                                        alt="india"
                                                        title="india"
@@ -1057,13 +915,10 @@
 
                                       <div class="slider__item">
                                           <picture>
-                                              <source media="(min-width:1024px)" srcset="content/img/india/ind2_x2.jpg">
-                                              <img class="slider__img"
-                                                   src="content/img/india/ind2.jpg"
-                                                   width="600" height="400"
-                                                   srcset="content/img/india/ind2_x2.jpg 1200w,
-                                                                                                content/img/india/ind2.jpg 600w,
-                                                                                                content/img/india/ind2_x2.jpg 2x
+                                              <img class="slider__img" src="img/preload.png"
+                                                   data-original="content/img/india/ind2.jpg"
+                                                   width="300" height="200"
+                                                   srcset="content/img/india/ind2_x2.jpg 2x
                                                                                                 "
                                                    alt="india"
                                                    title="india"
@@ -1080,13 +935,10 @@
 
                                       <div class="slider__item">
                                           <picture>
-                                              <source media="(min-width:1024px)" srcset="content/img/india/ind3_x2.jpg">
-                                              <img class="slider__img"
-                                                   src="content/img/india/ind3.jpg"
-                                                   width="600" height="400"
-                                                   srcset="content/img/india/ind3_x2.jpg 1200w,
-                                                                                                content/img/india/ind3.jpg 600w,
-                                                                                                content/img/india/ind3_x2.jpg 2x
+                                              <img class="slider__img" src="img/preload.png"
+                                                   data-original="content/img/india/ind3.jpg"
+                                                   width="300" height="200"
+                                                   srcset="content/img/india/ind3_x2.jpg 2x
                                                                                                 "
                                                    alt="india"
                                                    title="india"
@@ -1116,20 +968,17 @@
                                   </div>
                               </div>
 
-                              <div class="slider" data-country="finland" id="finland">
+                              <div class="slider" data-страна="finland" id="finland">
                                   <div class="slider__content">
 
                                       <div class="slider__item">
                                           <figure>
                                               <picture>
-                                                  <source media="(min-width:1024px)"
-                                                          srcset="content/img/finland/fin1_x2.jpg">
                                                   <img class="slider__img"
-                                                       src="content/img/finland/fin1.jpg"
-                                                       width="600" height="400"
-                                                       srcset="content/img/finland/fin1_x2.jpg 1200w,
-                                                                                                content/img/finland/fin1.jpg 600w,
-                                                                                                content/img/finland/fin1_x2.jpg 2x
+                                                       src="img/preload.png"
+                                                       data-original="content/img/finland/fin1.jpg"
+                                                       width="300" height="200"
+                                                       srcset="content/img/finland/fin1_x2.jpg 2x
                                                                                                 "
                                                        alt="finland"
                                                        title="finland"
@@ -1150,15 +999,10 @@
 
                                       <div class="slider__item">
                                           <picture>
-                                              <source media="(min-width:1024px)"
-                                                      srcset="content/img/finland/fin2_x2.jpg">
-                                              <img class="slider__img"
-                                                   src="content/img/finland/fin2.jpg"
-                                                   width="600" height="400"
-                                                   srcset="content/img/finland/fin2_x2.jpg 1200w,
-                                                                                                content/img/finland/fin2.jpg 600w,
-                                                                                                content/img/finland/fin2_x2.jpg 2x
-                                                                                                "
+                                              <img class="slider__img" src="img/preload.png"
+                                                   data-original="content/img/finland/fin2.jpg"
+                                                   width="300" height="200"
+                                                   srcset="content/img/finland/fin2_x2.jpg 2x"
                                                    alt="finland"
                                                    title="finland"
                                               >
@@ -1174,14 +1018,10 @@
 
                                       <div class="slider__item">
                                           <picture>
-                                              <source media="(min-width:1024px)"
-                                                      srcset="content/img/finland/fin3_x2.jpg">
-                                              <img class="slider__img"
-                                                   src="content/img/finland/fin3.jpg"
-                                                   width="600" height="400"
-                                                   srcset="content/img/finland/fin3_x2.jpg 1200w,
-                                                                                                content/img/finland/fin3.jpg 600w,
-                                                                                                content/img/finland/fin3_x2.jpg 2x
+                                              <img class="slider__img" src="img/preload.png"
+                                                   data-original="content/img/finland/fin3.jpg"
+                                                   width="300" height="200"
+                                                   srcset="content/img/finland/fin3_x2.jpg 2x
                                                                                                 "
                                                    alt="finland"
                                                    title="finland"
@@ -1211,20 +1051,16 @@
                                   </div>
                               </div>
 
-                              <div class="slider" data-country="new-zeland" id="new-zeland">
+                              <div class="slider slider--disabled" data-страна="new-zeland" id="new-zeland">
                                   <div class="slider__content">
 
                                       <div class="slider__item">
                                           <figure>
                                               <picture>
-                                                  <source media="(min-width:1024px)"
-                                                          srcset="content/img/new-zeland/newzel1_x2.jpg">
-                                                  <img class="slider__img"
-                                                       src="content/img/new-zeland/newzel1.jpg"
-                                                       width="600" height="400"
-                                                       srcset="content/img/new-zeland/newzel1_x2.jpg 1200w,
-                                                                                                content/img/new-zeland/newzel1.jpg 600w,
-                                                                                                content/img/new-zeland/newzel1_x2.jpg 2x
+                                                  <img class="slider__img" src="img/preload.png"
+                                                       data-original="content/img/new-zeland/newzel1.jpg"
+                                                       width="300" height="200"
+                                                                                                srcset="content/img/new-zeland/newzel1_x2.jpg 2x
                                                                                                 "
                                                        alt="new-zeland"
                                                        title="new-zeland"
@@ -1245,14 +1081,10 @@
 
                                       <div class="slider__item">
                                           <picture>
-                                              <source media="(min-width:1024px)"
-                                                      srcset="content/img/new-zeland/newzel2_x2.jpg">
-                                              <img class="slider__img"
-                                                   src="content/img/new-zeland/newzel2.jpg"
-                                                   width="600" height="400"
-                                                   srcset="content/img/new-zeland/newzel2_x2.jpg 1200w,
-                                                                                                content/img/new-zeland/newzel2.jpg 600w,
-                                                                                                content/img/new-zeland/newzel2_x2.jpg 2x
+                                              <img class="slider__img" src="img/preload.png"
+                                                   data-original="content/img/new-zeland/newzel2.jpg"
+                                                   width="300" height="200"
+                                                                                                 srcset="content/img/new-zeland/newzel2_x2.jpg 2x
                                                                                                 "
                                                    alt="new-zeland"
                                                    title="new-zeland"
@@ -1269,15 +1101,10 @@
 
                                       <div class="slider__item">
                                           <picture>
-                                              <source media="(min-width:1024px)"
-                                                      srcset="content/img/new-zeland/newzel3_x2.jpg">
-                                              <img class="slider__img"
-                                                   src="content/img/new-zeland/newzel3.jpg"
-                                                   width="600" height="400"
-                                                   srcset="content/img/new-zeland/newzel3_x2.jpg 1200w,
-                                                                                                content/img/new-zeland/newzel3.jpg 600w,
-                                                                                                content/img/new-zeland/newzel3_x2.jpg 2x
-                                                                                                "
+                                              <img class="slider__img" src="img/preload.png"
+                                                   data-original="content/img/new-zeland/newzel3.jpg"
+                                                   width="300" height="200"
+                                                   srcset="content/img/new-zeland/newzel3_x2.jpg 2x "
                                                    alt="new-zeland"
                                                    title="new-zeland"
                                               >
@@ -1292,7 +1119,7 @@
                                       </div>
                                   </div>
 
-                                  <div class="slider__control-bar">
+                                  <div class="slider__control-bar slider__control-bar--disabled">
                                       <button class="slider__control-btn slider__control-btn&#45;&#45;prev prev">
                                           <svg class="slider__svg-icon" width="24" height="24">
                                               <use xlink:href="img/svg_sprite.svg#icon-prev_slide"></use>
@@ -1305,6 +1132,7 @@
                                       </button>
                                   </div>
                               </div>
+
                           </div>
 
                       </div>
@@ -1333,77 +1161,8 @@
          </div>
      </footer>
 
-
-
-     <div id="placeHolder"></div>
-
-     <ul id="container">
-         <li data-genre="Drama, Sci-Fi, Thriller" data-actors="Harrison Ford, Rutger Hauer, Sean Young, Edward James Olmos" data-director="Ridley Scott">
-             ... <img src="film.png" data-original="img/movies/BladeRunner.jpg" /> ...
-         </li>
-         <li data-genre="Action, Crime, Drama, Thriller" data-actors="Christian Bale, Michael Caine, Ken Watanabe, Liam Neeson" data-director="Christopher Nolan">
-             ... <img src="film.png" data-original="img/movies/BatmanBegins.jpg" /> ...
-         </li>
-         <li data-genre="Drama" data-actors="Mark Wahlberg, Julianne Moore, Burt Reynolds, Luis GuzmÃ¡n" data-director="Paul Thomas Anderson">
-             ... <img src="film.png" data-original="img/movies/BoogieNights.jpg" /> ...
-         </li>
-         ...
-     </ul>
-
-
-
         <script src="js/jquery.fancybox.js"></script>
         <script src="js/fancybox_customization.js"></script>
-   <!--     <script src="js/lazyload_customization.js"></script>-->
-<!--        <script src="js/slider.js"></script>-->
-     <script src="js/common.js"></script>
-
-
-
-
-     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-     <script src="js/highlight.pack.js"></script>
-     <script src="js/script.js"></script>
-     <script src="js/filtrify.min.js"></script>
-     <script src="js/jquery.lazyload.min.js"></script>
-
-     <script type="text/javascript">
-
-         $(function() {
-
-             /*
-              Extend jQuery with an "inview" selector to
-              select elements that are in the visible
-              part of the page (at least partiacialy)
-              */
-             $.extend($.expr[':'],{
-                 inview: function(el) {
-                     var e = $(el),
-                             w = $(window),
-                             wt = w.scrollTop(),
-                             wb = wt + w.height(),
-                             et = e.offset().top,
-                             eb = et + e.height();
-
-                     return ( (eb >= wt) && (et <= wb) );
-                 }
-             });
-
-             $("ul#container img").lazyload({
-                 event : "scroll filter",
-                 effect : "fadeIn"
-             });
-
-             $.filtrify("container", "placeHolder", {
-                 block : "data-original",
-                 callback : function( query, match, mismatch ) {
-                     $(match).find("img:inview").trigger("filter");
-                 }
-             });
-
-         });
-
-     </script>
 
 
     </body>

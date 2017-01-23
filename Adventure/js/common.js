@@ -1,5 +1,3 @@
-
-
 $(document).ready(function(){
 
     //работа кнопок отображения/скрытия меню в мобильной версии
@@ -31,7 +29,6 @@ $(document).ready(function(){
     });
 
 
-    console.log('proverka')
 });
 
 

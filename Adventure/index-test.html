@@ -4,22 +4,42 @@
 <head>
 
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title>Filtrify - Load images with Lazy Load</title>
 
-    <meta name="description" content="Filtrify">
+
 
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/sunburst.css">
     <link rel="stylesheet" href="css/filtrify.css">
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="js/highlight.pack.js"></script>
-    <script src="js/script.js"></script>
     <script src="js/filtrify.min.js"></script>
     <script src="js/jquery.lazyload.min.js"></script>
+    <script src="js/slider.js"></script>
+
+    <style type="text/css">
+
+.slider__content{
+    position: relative;
+    width: 300px;
+    height: 200px;
+}
+
+        .slider__item{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 200px;
+        }
+
+        img{
+            width: 300px;
+            height: 200px;
+
+        }
+    </style>
+
 
 
     <script type="text/javascript">
@@ -44,7 +64,7 @@
                 }
             });
 
-            $("ul#container img").lazyload({
+            $("#container img").lazyload({
                 event : "scroll filter",
                 effect : "fadeIn"
             });
@@ -60,6 +80,15 @@
 
     </script>
 
+    <script>
+        var lazyHd = lazyload({src: hidpi});
+        function hidpi(img) {
+            if(window.devicePixelRatio > 1) {
+                return img.getAttribute('data-src-hd');
+            }
+        }
+    </script>
+
 </head>
 <body>
 
@@ -70,23 +99,199 @@
 
         <div id="placeHolder"></div>
 
-        <ul id="container">
-            <li data-genre="Drama, Sci-Fi, Thriller" data-main-actors="Harrison Ford, Rutger Hauer, Sean Young, Edward James Olmos" data-director="Ridley Scott"><strong>Blade Runner</strong><img src="content/img/finland/fin3.jpg" data-original="img/movies/BladeRunner.jpg"><span>genre: <i>Drama, Sci-Fi, Thriller</i></span><span>actors: <i>Harrison Ford, Rutger Hauer, Sean Young, Edward James Olmos</i></span><span>director: <i>Ridley Scott</i></span></li>
-            <li data-genre="Drama" data-main-actors="Mark Wahlberg, Julianne Moore, Burt Reynolds, Luis GuzmÃ¡n" data-director="Paul Thomas Anderson"><strong>Boogie Nights</strong><img src="content/img/finland/fin3.jpg" data-original="img/movies/BoogieNights.jpg"><span>genre: <i>Drama</i></span><span>actors: <i>Mark Wahlberg, Julianne Moore, Burt Reynolds, Luis GuzmÃ¡n</i></span><span>director: <i>Paul Thomas Anderson</i></span></li>
-            <li data-genre="Action, Adventure" data-main-actors="Harrison Ford, Sean Connery, Alison Doody, Denholm Elliott" data-director="Steven Spielberg"><strong>Indiana Jones and the Last Crusade</strong><img src="content/img/finland/fin3.jpg" data-original="img/movies/IndianaJonesandtheLastCrusade.jpg"><span>genre: <i>Action, Adventure</i></span><span>actors: <i>Harrison Ford, Sean Connery, Alison Doody, Denholm Elliott</i></span><span>director: <i>Steven Spielberg</i></span></li>
-            <li data-genre="Action, Horror, Sci-Fi" data-main-actors="Noomi Rapace, Charlize Theron, Patrick Wilson, Idris Elba" data-director="Ridley Scott"><strong>Prometheus</strong><img src="content/img/finland/fin3.jpg" data-original="img/movies/Prometheus.jpg"><span>genre: <i>Action, Horror, Sci-Fi</i></span><span>actors: <i>Noomi Rapace, Charlize Theron, Patrick Wilson, Idris Elba</i></span><span>director: <i>Ridley Scott</i></span></li>
-            <li data-genre="Drama, Mystery, Thriller" data-main-actors="Leonardo DiCaprio, Emily Mortimer, Mark Ruffalo, Ben Kingsley" data-director="Martin Scorsese"><strong>Shutter Island</strong><img src="content/img/finland/fin3.jpg" data-original="img/movies/ShutterIsland.jpg"><span>genre: <i>Drama, Mystery, Thriller</i></span><span>actors: <i>Leonardo DiCaprio, Emily Mortimer, Mark Ruffalo, Ben Kingsley</i></span><span>director: <i>Martin Scorsese</i></span></li>
-            <li data-genre="Drama" data-main-actors="Sean Connery, Rob Brown, F. Murray Abraham, Anna Paquin" data-director="Gus Van Sant"><strong>Finding Forrester</strong><img src="content/img/finland/fin3.jpg" data-original="img/movies/FindingForrester.jpg"><span>genre: <i>Drama</i></span><span>actors: <i>Sean Connery, Rob Brown, F. Murray Abraham, Anna Paquin</i></span><span>director: <i>Gus Van Sant</i></span></li>
-            <li data-genre="Mystery, Thriller" data-main-actors="Tom Hanks, Audrey Tautou, Jean Reno, Ian McKellen" data-director="Ron Howard"><strong>The Da Vinci Code</strong><img src="content/img/finland/fin3.jpg" data-original="img/movies/TheDaVinciCode.jpg"><span>genre: <i>Mystery, Thriller</i></span><span>actors: <i>Tom Hanks, Audrey Tautou, Jean Reno, Ian McKellen</i></span><span>director: <i>Ron Howard</i></span></li>
-            <li data-genre="Drama, History, War" data-main-actors="Jeremy Irvine, Emily Watson, David Thewlis, Benedict Cumberbatch" data-director="Steven Spielberg"><strong>War Horse</strong><img src="content/img/finland/fin3.jpg" data-original="img/movies/WarHorse.jpg"><span>genre: <i>Drama, History, War</i></span><span>actors: <i>Jeremy Irvine, Emily Watson, David Thewlis, Benedict Cumberbatch</i></span><span>director: <i>Steven Spielberg</i></span></li>
-            <li data-genre="Action, Crime, Fantasy, Thriller" data-main-actors="Michael Keaton, Danny DeVito, Michelle Pfeiffer, Christopher Walken" data-director="Tim Burton"><strong>Batman Returns</strong><img src="content/img/finland/fin3.jpg" data-original="img/movies/BatmanReturns.jpg"><span>genre: <i>Action, Crime, Fantasy, Thriller</i></span><span>actors: <i>Michael Keaton, Danny DeVito, Michelle Pfeiffer, Christopher Walken</i></span><span>director: <i>Tim Burton</i></span></li>
-            <li data-genre="Comedy, Drama, Romance" data-main-actors="Adam Sandler, Emily Watson, Philip Seymour Hoffman, Jason Andrews" data-director="Paul Thomas Anderson"><strong>Punch-Drunk Love</strong><img src="content/img/finland/fin3.jpg" data-original="img/movies/PunchDrunkLove.jpg"><span>genre: <i>Comedy, Drama, Romance</i></span><span>actors: <i>Adam Sandler, Emily Watson, Philip Seymour Hoffman, Jason Andrews</i></span><span>director: <i>Paul Thomas Anderson</i></span></li>
-            <li data-genre="Biography, Crime, Drama" data-main-actors="Denzel Washington, Russell Crowe, Chiwetel Ejiofor, Josh Brolin" data-director="Ridley Scott"><strong>American Gangster</strong><img src="content/img/finland/fin3.jpg" data-original="img/movies/AmericanGangster.jpg"><span>genre: <i>Biography, Crime, Drama</i></span><span>actors: <i>Denzel Washington, Russell Crowe, Chiwetel Ejiofor, Josh Brolin</i></span><span>director: <i>Ridley Scott</i></span></li>
-            <li data-genre="Action, Adventure, Sci-Fi, Thriller" data-main-actors="Mark Wahlberg, Helena Bonham Carter, Tim Roth, Michael Clarke Duncan" data-director="Tim Burton"><strong>Planet of the Apes</strong><img src="content/img/finland/fin3.jpg" data-original="img/movies/PlanetoftheApes.jpg"><span>genre: <i>Action, Adventure, Sci-Fi, Thriller</i></span><span>actors: <i>Mark Wahlberg, Helena Bonham Carter, Tim Roth, Michael Clarke Duncan</i></span><span>director: <i>Tim Burton</i></span></li>
-        </ul>
+        <div id="container">
+            <div data-genre="Drama, Sci-Fi, Thriller" data-main-actors="Harrison Ford, Rutger Hauer, Sean Young, Edward James Olmos" data-director="Ridley Scott"><strong>Blade Runner</strong><img srcset="content/img/cuba/cuba_x2.jpg 2x"  data-original="content/img/finland/fin3.jpg""img/movies/BladeRunner.jpg"><span>genre: <i>Drama, Sci-Fi, Thriller</i></span><span>actors: <i>Harrison Ford, Rutger Hauer, Sean Young, Edward James Olmos</i></span><span>director: <i>Ridley Scott</i></span></div>
+            <div data-genre="Action, Adventure" data-main-actors="Harrison Ford, Sean Connery, Alison Doody, Denholm Elliott" data-director="Steven Spielberg"><strong>Indiana Jones and the Last Crusade</strong><img srcset="content/img/cuba/cuba_x2.jpg 2x"  data-original="content/img/finland/fin3.jpg""img/movies/IndianaJonesandtheLastCrusade.jpg"><span>genre: <i>Action, Adventure</i></span><span>actors: <i>Harrison Ford, Sean Connery, Alison Doody, Denholm Elliott</i></div>
+            <div data-genre="Drama" data-main-actors="Mark Wahlberg, Julianne Moore, Burt Reynolds, Luis GuzmÃ¡n" data-director="Paul Thomas Anderson"><strong>Boogie Nights</strong><img srcset="content/img/cuba/cuba_x2.jpg 2x"  data-original="content/img/finland/fin3.jpg""img/movies/BoogieNights.jpg"><span>genre: <i>Drama</i></span><span>actors: <i>Mark Wahlberg, Julianne Moore, Burt Reynolds, Luis GuzmÃ¡n</i></span><span>director: <i>Paul Thomas Anderson</i></span></div>
+            <div data-genre="Action, Horror, Sci-Fi" data-main-actors="Noomi Rapace, Charlize Theron, Patrick Wilson, Idris Elba" data-director="Ridley Scott"><strong>Prometheus</strong><img srcset="content/img/cuba/cuba_x2.jpg 2x"  data-original="content/img/finland/fin3.jpg""img/movies/Prometheus.jpg"><span>genre: <i>Action, Horror, Sci-Fi</i></span><span>actors: <i>Noomi Rapace, Charlize Theron, Patrick Wilson, Idris Elba</i></span><span>director: <i>Ridley Scott</i></span></div>
+            <div data-genre="Drama, Mystery, Thriller" data-main-actors="Leonardo DiCaprio, Emily Mortimer, Mark Ruffalo, Ben Kingsley" data-director="Martin Scorsese"><strong>Shutter Island</strong><img srcset="content/img/cuba/cuba_x2.jpg 2x"  data-original="content/img/finland/fin3.jpg""img/movies/ShutterIsland.jpg"><span>genre: <i>Drama, Mystery, Thriller</i></span><span>actors: <i>Leonardo DiCaprio, Emily Mortimer, Mark Ruffalo, Ben Kingsley</i></span><span>director: <i>Martin Scorsese</i></span></div>
+            <div data-genre="Drama" data-main-actors="Sean Connery, Rob Brown, F. Murray Abraham, Anna Paquin" data-director="Gus Van Sant"><strong>Finding Forrester</strong><img srcset="content/img/cuba/cuba_x2.jpg 2x"  data-original="content/img/finland/fin3.jpg""img/movies/FindingForrester.jpg"><span>genre: <i>Drama</i></span><span>actors: <i>Sean Connery, Rob Brown, F. Murray Abraham, Anna Paquin</i></span><span>director: <i>Gus Van Sant</i></span></div>
+            <div data-genre="Mystery, Thriller" data-main-actors="Tom Hanks, Audrey Tautou, Jean Reno, Ian McKellen" data-director="Ron Howard"><strong>The Da Vinci Code</strong><img srcset="content/img/cuba/cuba_x2.jpg 2x"  data-original="content/img/finland/fin3.jpg""img/movies/TheDaVinciCode.jpg"><span>genre: <i>Mystery, Thriller</i></span><span>actors: <i>Tom Hanks, Audrey Tautou, Jean Reno, Ian McKellen</i></span><span>director: <i>Ron Howard</i></span></div>
+            <div data-genre="Drama, History, War" data-main-actors="Jeremy Irvine, Emily Watson, David Thewlis, Benedict Cumberbatch" data-director="Steven Spielberg"><strong>War Horse</strong><img  srcset="content/img/cuba/cuba_x2.jpg 2x" data-original="content/img/finland/fin3.jpg""img/movies/WarHorse.jpg"><span>genre: <i>Drama, History, War</i></span><span>actors: <i>Jeremy Irvine, Emily Watson, David Thewlis, Benedict Cumberbatch</i></span><span>director: <i>Steven Spielberg</i></span></div>
+            <div data-genre="Action, Crime, Fantasy, Thriller" data-main-actors="Michael Keaton, Danny DeVito, Michelle Pfeiffer, Christopher Walken" data-director="Tim Burton"><strong>Batman Returns</strong><img srcset="content/img/cuba/cuba_x2.jpg 2x"  data-original="content/img/finland/fin3.jpg""img/movies/BatmanReturns.jpg"><span>genre: <i>Action, Crime, Fantasy, Thriller</i></span><span>actors: <i>Michael Keaton, Danny DeVito, Michelle Pfeiffer, Christopher Walken</i></span><span>director: <i>Tim Burton</i></span></div>
+            <div data-genre="Comedy, Drama, Romance" data-main-actors="Adam Sandler, Emily Watson, Philip Seymour Hoffman, Jason Andrews" data-director="Paul Thomas Anderson"><strong>Punch-Drunk Love</strong><img srcset="content/img/cuba/cuba_x2.jpg 2x"  data-original="content/img/finland/fin3.jpg""img/movies/PunchDrunkLove.jpg"><span>genre: <i>Comedy, Drama, Romance</i></span><span>actors: <i>Adam Sandler, Emily Watson, Philip Seymour Hoffman, Jason Andrews</i></span><span>director: <i>Paul Thomas Anderson</i></span></div>
+            <div data-genre="Biography, Crime, Drama" data-main-actors="Denzel Washington, Russell Crowe, Chiwetel Ejiofor, Josh Brolin" data-director="Ridley Scott"><strong>American Gangster</strong><img srcset="content/img/cuba/cuba_x2.jpg 2x"  data-original="content/img/finland/fin3.jpg""img/movies/AmericanGangster.jpg"><span>genre: <i>Biography, Crime, Drama</i></span><span>actors: <i>Denzel Washington, Russell Crowe, Chiwetel Ejiofor, Josh Brolin</i></span><span>director: <i>Ridley Scott</i></span></div>
+            <div data-genre="Action, Adventure, Sci-Fi, Thriller" data-main-actors="Mark Wahlberg, Helena Bonham Carter, Tim Roth, Michael Clarke Duncan" data-director="Tim Burton"><strong>Planet of the Apes</strong><img  data-original="content/img/finland/fin3.jpg""img/movies/PlanetoftheApes.jpg"><span>genre: <i>Action, Adventure, Sci-Fi, Thriller</i></span><span>actors: <i>Mark Wahlberg, Helena Bonham Carter, Tim Roth, Michael Clarke Duncan</i></span><span>director: <i>Tim Burton</i></span></div>
+            <div class="slider" data-country="cuba" id="cuba">
+                <div class="slider__content">
 
+                    <div class="slider__item">
+                                <img class="slider__img"
+                                     data-src-hd="content/img/cuba/cuba_x2"
+                                     
+                                     data-original="content/img/cuba/cuba.jpg"
+                                     width="600" height="400"
+                                     alt="Cuba"
+                                     title="Cuba"
+
+                                >
+                    </div>
+
+                    <div class="slider__item slider__item--text-block">
+                        <p class="slider__text">
+                            Хэмингуэй, став весьма знаменитым, естественно, мог выбрать любое место
+                            в мире. Почему же он 22 года прожил
+                            в Гаване? Потому что это свобода!
+                        </p>
+
+                        <h2 class="slider__name">cuba</h2>
+                    </div>
+
+                    <div class="slider__item">
+                        <picture>
+                            <source media="(min-width:1024px)"
+                                    srcset="content/img/cuba/cuba_car_x2.jpg">
+                            <img class="slider__img"
+                                 src="content/img/cuba/cuba_car.jpg"
+                                 width="600" height="400"
+                                 srcset="content/img/cuba/cuba_car_x2.jpg 1200w,
+                                                                                                content/img/cuba/cuba_car.jpg 600w,
+                                                                                                content/img/cuba/cuba_car_x2.jpg 2x
+                                                                                                "
+                                 alt="car in Cuba"
+                                 title="car in Cuba"
+                            >
+                        </picture>
+                        <h2 class="slider__name">cuba</h2>
+                        <a class="lnk-fancy fancybox slider__btn"
+                           href="content/img/cuba/cuba_car_x2.jpg">
+                            <svg class="slider__media-btn" width="42" height="42">
+                                <use xlink:href="img/svg_sprite.svg#icon_zoom"></use>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="slider__item">
+                        <picture>
+                            <source media="(min-width:1024px)"
+                                    srcset="content/img/cuba/cuba_girl_x2.jpg">
+                            <img class="slider__img"
+                                 src="content/img/cuba/cuba_girl.jpg"
+                                 width="600" height="400"
+                                 srcset="content/img/cuba/cuba_girl_x2.jpg 1200w,
+                                                                                                content/img/cuba/cuba_girl.jpg 600w"
+                                 alt="girl in Cuba"
+                                 title="girl in Cuba"
+                            >
+                        </picture>
+                        <h2 class="slider__name">cuba</h2>
+                        <a class="video slider__btn" title="The Falltape"
+                           href="https://www.youtube.com/watch?v=i-HYtAy7ezU">
+                            <svg class="slider__media-btn" width="42" height="42">
+                                <use xlink:href="img/svg_sprite.svg#icon_play"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="slider__control-bar">
+                    <button class="slider__control-btn slider__control-btn&#45;&#45;prev prev">
+                        <svg class="slider__svg-icon" width="24" height="24">
+                            <use xlink:href="img/svg_sprite.svg#icon-prev_slide"></use>
+                        </svg>
+                    </button>
+                    <button class="slider__control-btn slider__control-btn&#45;&#45;next next">
+                        <svg class="slider__svg-icon" width="24" height="24">
+                            <use xlink:href="img/svg_sprite.svg#icon-next_slide"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+
+    <div class="slider" data-страна="russia" id="russia">
+        <div class="slider__content">
+
+            <div class="slider__item">
+           <!--     <figure>
+                    <picture>
+                        <img class="slider__img"
+                             src="content/img/russia/rus1.jpg"
+                             width="300" height="200"
+                             srcset="content/img/russia/rus1_x2.jpg 2x"
+                             alt="Russia"
+                             title="Russia"
+                        >
+                    </picture>
+                    <figcaption class="slider__title">russia</figcaption>
+                </figure>-->
+
+                <a href="#" class="slider__title">russia
+                        <img class="slider__img"
+                             src="content/img/russia/rus1.jpg"
+                             width="300" height="200"
+                             srcset="content/img/russia/rus1_x2.jpg 2x"
+                             alt="Russia"
+                             title="Russia"
+                        >
+                </a>
+
+            <div class="slider__item slider__item--text-block">
+                <p class="slider__text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis,
+                    repellat.
+                </p>
+
+                <h2 class="slider__name">russia</h2>
+            </div>
+
+            <div class="slider__item">
+                <picture>
+                    <img class="slider__img" 
+                       src="content/img/russia/rus1.jpg"
+                         width="300" height="200">
+
+                                                                                                "
+
+                </picture>
+                <h2 class="slider__name">russia</h2>
+                <a class="lnk-fancy fancybox slider__btn"
+                   href="content/img/russia/rus2_x2.jpg">
+                    <svg class="slider__media-btn" width="42" height="42">
+                        <use xlink:href="img/svg_sprite.svg#icon_zoom"></use>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="slider__item">
+                <picture>
+                    <img class="slider__img" 
+                         src="content/img/russia/rus3.jpg"
+                         width="300" height="200"
+
+                         alt="Russia"
+                         title="Russia"
+                    >
+                </picture>
+                <h2 class="slider__name">russia</h2>
+                <a class="video slider__btn" title="Russia-video"
+                   href="https://www.youtube.com/watch?v=i-HYtAy7ezU">
+                    <svg class="slider__media-btn" width="42" height="42">
+                        <use xlink:href="img/svg_sprite.svg#icon_play"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="slider__control-bar">
+            <button class="slider__control-btn slider__control-btn&#45;&#45;prev prev">
+                <svg class="slider__svg-icon" width="24" height="24">
+                    <use xlink:href="img/svg_sprite.svg#icon-prev_slide"></use>
+                </svg>
+            </button>
+            <button class="slider__control-btn slider__control-btn&#45;&#45;next next">
+                <svg class="slider__svg-icon" width="24" height="24">
+                    <use xlink:href="img/svg_sprite.svg#icon-next_slide"></use>
+                </svg>
+            </button>
+        </div>
     </div>
+
+
 </div>
+
 
 
 

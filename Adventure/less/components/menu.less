@@ -23,6 +23,14 @@ mobile-first
     border-bottom: 3px solid @footer-text-color--lighter;
 
 
+    &--filter{
+
+
+      &:hover{
+        color: @menu-text-color--hover;
+      }
+    }
+
 
     &:hover{
       background: @footer-text-color;
@@ -32,7 +40,8 @@ mobile-first
 
 
       a{
-        color: @menu-text-color;
+        color: @content-item-color;
+
         line-height:40px;
         font-size: 0.875rem;
         width: 100%;
@@ -53,7 +62,7 @@ mobile-first
 
       background: @header_bg;
       a{
-
+        opacity:.6;
         cursor: default;
       }
       &:hover{
@@ -82,16 +91,26 @@ mobile-first
 
       background: none;
       margin-right: 25px;
-      display: inline;
+      display: inline-block;
+
 
       border-bottom: none;
+
+      &--filter{
+        color: @menu-text-color!important;
+      }
 
       &:hover{
         background: none;
       }
 
+      &:last-child {
+        margin-right: 0;
+      }
+
       a {
         font-size: 0.75rem;
+        line-height: 18px;
         display: inline;
         color: @menu-text-color;
 
@@ -125,9 +144,7 @@ mobile-first
 
 
 
-    &:last-child {
-      margin-right: 0;
-    }
+
 
 
 
