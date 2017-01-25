@@ -1,39 +1,31 @@
 $(document).ready(function(){
 
-    //работа кнопок отображения/скрытия меню в мобильной версии
+
 
     var closeBtn =  $(".main-header__menu-btn--close"),
         openBtn = $(".main-header__menu-btn--open"),
         menu =  $(".menu__navigation-list");
 
-    openBtn.click(function () {
+    openBtn.click(function mobileMenuOpenFunc () {
         menu.stop().slideToggle(500);
         openBtn.stop().toggle(150);
         closeBtn.stop().toggle(150);
 
     });
 
-    closeBtn.click(function () {
+    closeBtn.click(function mobileMenuCloseFunc () {
         menu.stop().slideToggle(500);
         openBtn.stop().toggle(150);
         closeBtn.stop().toggle(150);
     });
 
-
-    //изменение цвета фона header'a при наведении мыши на логотип
-
-    $('.main-header__logo-img-wrap').hover(function(){
+    $('.main-header__logo-img-wrap').hover(function logosBackgroundHoverChange(){
         $('.main-header').css('background','#22539d');
     }, function(){
         $('.main-header').css('background','#282a2d');
     });
 
-
-    //работа слайдера
-
-
-
-    $('.next').click(function(){
+    $('.next').click(function sliderNextBtnAction(){
         var slider = $(this).parents('.slider');
         var content = $(slider).children('.slider__content');
         var current = $(content).children('.slider__item:visible');
@@ -43,7 +35,7 @@ $(document).ready(function(){
         next.fadeIn(600);
     });
 
-    $('.prev').click(function(){
+    $('.prev').click(function sliderPrevBtnAction(){
         var slider = $(this).parents('.slider');
         var content = $(slider).children('.slider__content');
         var current = $(content).children('.slider__item:visible');
@@ -54,22 +46,10 @@ $(document).ready(function(){
     });
 
 
-
-    //переименование фильтра
-
-    window.onload = function() {
+    window.onload = function filtersNameChange() {
         $(".ft-label").text('страна');
     };
 
-
-    //раскрытие фильтра на малом экране
-    function checkPosition() {
-        if (window.matchMedia('(max-width: 767px)').matches) {
-            console.log('josdijflajf');
-        } else {
-            console.log('big screen')
-        }
-    }
 });
 
 

@@ -22,12 +22,10 @@ $(document).ready(function(){
 
         } else {
 
-// Reset for CSS changes - Still need a better way to do this!
 
             $('.content__block').css("padding-top","0px");
         }
     };
-    // Set the function to resize
     $(window).resize(ravenous);
     // Call the function
     ravenous();

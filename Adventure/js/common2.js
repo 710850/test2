@@ -1,11 +1,6 @@
 
-    $(function() {
+    $(function lazyLoadImg() {
 
-        /*
-         Extend jQuery with an "inview" selector to
-         select elements that are in the visible
-         part of the page (at least partiacialy)
-         */
         $.extend($.expr[':'], {
             inview: function(el) {
                 var e = $(el),

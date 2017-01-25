@@ -75,3 +75,9 @@ button{
     text-transform: uppercase;
     padding:0!important;
 }
+
+.clearfix:after {
+    content: '';
+    clear: both;
+    display: block;
+}

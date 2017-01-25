@@ -1,14 +1,17 @@
 
     $(document).ready(function() {
      $(".fancybox").fancybox();
-     $("a.group").fancybox({
+    /* $("a.group").fancybox({
       'transitionIn'	:	'elastic',
       'transitionOut'	:	'elastic',
       'speedIn'		:	600,
       'speedOut'		:	200,
       'overlayShow'	:	true,
-      'padding'       : 0
-     });
+      'padding'       : 0,
+      'width'			: 640,
+      'height'		: 480,
+      'margin' : 200
+     });*/
 
 
 
